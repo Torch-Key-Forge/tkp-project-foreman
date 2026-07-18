@@ -1,5 +1,6 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
+  "coverage": "REFERENCED_CLAIM_EVIDENCE_ONLY",
   "source_turns": [
     {
       "source_ref": "SRC-ATLAS-TURN-0001",
@@ -11,15 +12,6 @@
       "text_sha256": "1b4ed1fc7edddcd98969efc3051386c6bd32c63697386e2b43c6ff079d4285e8"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0002",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0002",
-      "ordinal": 2,
-      "role": "assistant",
-      "text": "A safe first version can be local-only and read-only. The tool can inventory the folder, normalize supported text files, identify project themes, and produce a brief plus a source index.",
-      "text_sha256": "bb6b89e335d249484c24a58492b469073455ef396f137f93baaed8d24b4dbd30"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0003",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0003",
@@ -29,67 +21,13 @@
       "text_sha256": "c849a488959417416a54b7ba742efaed737f2fab722615bff4fae236a945b41d"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0004",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0004",
-      "ordinal": 4,
-      "role": "assistant",
-      "text": "Then provenance should be part of the core data model rather than added later. Each claim should carry one or more source references.",
-      "text_sha256": "2f2b9fa9c364ac4ad8372bb24e5577f7ab3d34954ddcdb66794155242af7da7f"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0005",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0005",
       "ordinal": 5,
       "role": "user",
       "text": "Also, do not build cloud sync yet. I want the first version to run entirely on my computer.",
-      "text_sha256": "8af2d4cb90f1df301db6ff62c5e2721b5131dec7e4f67b71ea3da10f01748398"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0006",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0006",
-      "ordinal": 6,
-      "role": "assistant",
-      "text": "Understood. The initial boundary is local-only, read-only, and no cloud mutation.",
-      "text_sha256": "0b1ffcab6a8c882d88e32ae62499121c81919bf1d8de7550fad53be143a768da"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0007",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0007",
-      "ordinal": 7,
-      "role": "user",
-      "text": "Can you outline a good, better, best version?",
-      "text_sha256": "3d799e7a2e3ddc26674436d283cc3c776fc67bf857a0286335d7e5fedc30e37f"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0008",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0008",
-      "ordinal": 8,
-      "role": "assistant",
-      "text": "Good: local folder intake, text normalization, project brief, source index. Better: duplicate detection, topic spine, decision extraction, and review queues. Best: multi-project orchestration, cloud custody, team workflows, and governed publishing.",
-      "text_sha256": "7da70d62147259cd3937ccaf29811c46d42c63f6912a5c106bb21f8b6c7fc9bf"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0009",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0009",
-      "ordinal": 9,
-      "role": "user",
-      "text": "Good is enough for the first build.",
-      "text_sha256": "7863151ddb2a7730b7185866257b9c58ab99475e60d44050e100d988496b8937"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0010",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0010",
-      "ordinal": 10,
-      "role": "assistant",
-      "text": "Then the first build should stay narrow and deterministic.",
-      "text_sha256": "83b4fd3590e8707273e191d77a14e60dfae1b403594948a09a0706dbd937d34b"
+      "text_sha256": "8af2d4cb90f1df301255860bc116083e57e200015aa727eaa51d6fb76b6e195b"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0011",
@@ -97,53 +35,8 @@
       "turn_id": "ATLAS-TURN-0011",
       "ordinal": 11,
       "role": "assistant",
-      "text": "Proposed architecture: Folder Scanner \u2192 Text Normalizer \u2192 Evidence Index \u2192 Brief Generator \u2192 Manifest and Checksums.",
+      "text": "Proposed architecture: Folder Scanner → Text Normalizer → Evidence Index → Brief Generator → Manifest and Checksums.",
       "text_sha256": "fc4a03217d67dbb7ec8d35c5edc5a86a4b7edc71c754cf2225a2444066ab0a92"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0012",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0012",
-      "ordinal": 12,
-      "role": "user",
-      "text": "What file types should it accept?",
-      "text_sha256": "1c8e9f78f6f82c301255860bc116083e57e200015aa727eaa51d6fb76b6e195b"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0013",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0013",
-      "ordinal": 13,
-      "role": "assistant",
-      "text": "For the prototype: UTF-8 text, Markdown, and JSON. PDF and office files should be deferred.",
-      "text_sha256": "eb13d8527a2e44d7556a2683b5a70c2b7feee6108448162709846add274c905f"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0014",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0014",
-      "ordinal": 14,
-      "role": "user",
-      "text": "That is fine. I would rather have three formats work reliably than ten formats work badly.",
-      "text_sha256": "2a1cd83e2f593b97719319afdbef770625cfd6df146a1e2e783dc69f51687f0a"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0015",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0015",
-      "ordinal": 15,
-      "role": "assistant",
-      "text": "Agreed. We can fail closed on unsupported files and report them without attempting conversion.",
-      "text_sha256": "d29daf6d3dd38f38e7583d925a257edb59c00c2950d08cdb253d528935abf09c"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0016",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0016",
-      "ordinal": 16,
-      "role": "user",
-      "text": "Should the output be one big report?",
-      "text_sha256": "bae059bac4636c5b3885b9489dbd01abf8720385c968ff8ba9bebe9a0c7ab1cd"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0017",
@@ -155,24 +48,6 @@
       "text_sha256": "78318b1b22498ea76cdcaa4f5c06a034949c0d61a3d35a76458e1784b6256940"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0018",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0018",
-      "ordinal": 18,
-      "role": "user",
-      "text": "Yes. Keep the source evidence separate from the readable brief.",
-      "text_sha256": "102607f621897d338e9c176799977b6bae7901ea9b85f31cda1fdc6d541b240f"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0019",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0019",
-      "ordinal": 19,
-      "role": "assistant",
-      "text": "That separation will also make later UI work easier.",
-      "text_sha256": "cee8789bd1b78f00467c727804eb88b4afcfebd90e8b5efae19291e592ffb8a8"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0020",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0020",
@@ -180,33 +55,6 @@
       "role": "user",
       "text": "I want stable IDs for every source file and recovered claim.",
       "text_sha256": "356fd6c41b89e4c1fb86e9e62c773c2fccdab48cbc81ca322cedb3fdcb4957fb"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0021",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0021",
-      "ordinal": 21,
-      "role": "assistant",
-      "text": "We can derive deterministic IDs from normalized relative paths and content hashes.",
-      "text_sha256": "f9099bac39a6acefa503bb2f5fe5ebca215ba0140fadf90b6c8f9b856d714241"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0022",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0022",
-      "ordinal": 22,
-      "role": "user",
-      "text": "Do not use random UUIDs for the golden fixture.",
-      "text_sha256": "43b9c142b3944378971454eb22fdfe6783168df6f95967e88584ea95318265a5"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0023",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0023",
-      "ordinal": 23,
-      "role": "assistant",
-      "text": "Understood. The fixture build will use deterministic identifiers.",
-      "text_sha256": "06f154c4195938da37027f100d862e86fa5ef2f2436ee3361ee1dd8006d552a4"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0024",
@@ -218,222 +66,6 @@
       "text_sha256": "dc3118007e8a4003635f64508a647d8a3a439ddeb27bb6f7676fa9c8179e2327"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0025",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0025",
-      "ordinal": 25,
-      "role": "assistant",
-      "text": "Authorization recorded. I will treat cloud sync, source mutation, and unsupported document conversion as out of scope.",
-      "text_sha256": "4a69591c44330fb5250233293421a833b5427884f6bdd411bedbc79f8e11eb95"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0026",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0026",
-      "ordinal": 26,
-      "role": "assistant",
-      "text": "The prototype can be implemented as a Python package with a small local web interface later.",
-      "text_sha256": "afb8b82b29508062a6efb5bda69f5ca5aa4e6c238385050e5bc0c78917ed99c4"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0027",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0027",
-      "ordinal": 27,
-      "role": "user",
-      "text": "Start with the pipeline first. The interface can wait until the outputs are trustworthy.",
-      "text_sha256": "43de686b60f3a759f4ecbcfd4a1c2907a015894e588fe140be44304b3c7a858d"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0028",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0028",
-      "ordinal": 28,
-      "role": "assistant",
-      "text": "That is the right order.",
-      "text_sha256": "115d1855b3877b5ceca8b45fd2ac691030f141ac145f826d31453ed450539dee"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0029",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0029",
-      "ordinal": 29,
-      "role": "user",
-      "text": "What should the acceptance test look like?",
-      "text_sha256": "4d26839e5fefaadc7844c21c52641af9544b946c37c5efa225e119c8066fcb3d"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0030",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0030",
-      "ordinal": 30,
-      "role": "assistant",
-      "text": "A fixture folder with several notes, one duplicate, one unsupported file, and a few explicit decisions. The run should produce deterministic outputs and leave all source files unchanged.",
-      "text_sha256": "8f65d809932e9b5d16997576b6f7717b6ff3c9da93d338b8e46f7d077fbc4b47"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0031",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0031",
-      "ordinal": 31,
-      "role": "user",
-      "text": "Include a failed or ambiguous note too, so open questions are not invented as settled facts.",
-      "text_sha256": "479e88badd588eed1a3efff2fd1cbf156e5ed124c14d84646e655c805597dc0a"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0032",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0032",
-      "ordinal": 32,
-      "role": "assistant",
-      "text": "Good. The brief should distinguish confirmed facts, operator decisions, and unresolved items.",
-      "text_sha256": "844e4bb31da62fe6e2694b2a26f35ab89637181295af42eb5faadb6d2aa9f9ca"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0033",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0033",
-      "ordinal": 33,
-      "role": "assistant",
-      "text": "I drafted the source record shape: source_id, relative_path, sha256, media_type, extraction_status, and warnings.",
-      "text_sha256": "32b4af97964ce48dede7e08f8fc20d8979a1fdae19830e08390366c3ec231f67"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0034",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0034",
-      "ordinal": 34,
-      "role": "user",
-      "text": "Add a read_only flag and original size.",
-      "text_sha256": "9c407b39a8aa79e1ced3684f1a252cd86888460de2370572326b80c58a500d7c"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0035",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0035",
-      "ordinal": 35,
-      "role": "assistant",
-      "text": "Added. Claim records will include claim_id, text, claim_type, source_refs, and confidence.",
-      "text_sha256": "9cf2cb66ba2963520fa6fd89f4676b47c7038b90e012c1aca50b97f4bcd25442"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0036",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0036",
-      "ordinal": 36,
-      "role": "user",
-      "text": "Do not call something a decision unless the project owner actually decided it.",
-      "text_sha256": "468b39763b5bd55e9dcc98ec0ca28a3670814e52454e4553977a65bc1dbb6e5f"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0037",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0037",
-      "ordinal": 37,
-      "role": "assistant",
-      "text": "Then assistant proposals will remain proposals, never decisions.",
-      "text_sha256": "5e2c32dc57f2d4a893abd920ae4200bab243e144344ff4935630c9a6157590d9"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0038",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0038",
-      "ordinal": 38,
-      "role": "user",
-      "text": "Exactly.",
-      "text_sha256": "445ea76e0fecc22edfb57a2ca2be09cca64ca11a356ce23a5287505de22c9fc0"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0039",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0039",
-      "ordinal": 39,
-      "role": "assistant",
-      "text": "I also recommend storing a normalized excerpt for source trace display.",
-      "text_sha256": "0077f8ff38c2bc4c5ceedcf7a74f560b4fd7d9bd590de4dc503e2afb747a8648"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0040",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0040",
-      "ordinal": 40,
-      "role": "user",
-      "text": "Yes, but keep the full original source file outside the generated package.",
-      "text_sha256": "ea1adce192d5e73977331c9b799b7a13df0fdea2d91f1170ae174d52346e58ab"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0041",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0041",
-      "ordinal": 41,
-      "role": "assistant",
-      "text": "Understood.",
-      "text_sha256": "334328a126b2f6fb3fe237920c70a4e64c64ca657fde58eee492f624684de3e4"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0042",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0042",
-      "ordinal": 42,
-      "role": "assistant",
-      "text": "The first fixture contains four Markdown notes, one JSON settings file, one duplicate note, and one PNG placeholder.",
-      "text_sha256": "cf95296a6e915e8ec042082afafd3519860605624b9417d9e7383105fce61d59"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0043",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0043",
-      "ordinal": 43,
-      "role": "user",
-      "text": "The PNG should be reported as unsupported, not ignored.",
-      "text_sha256": "35e259ffd4270eaeff31d281ba2258003e329a22748a012d4186326ba468e0f6"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0044",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0044",
-      "ordinal": 44,
-      "role": "assistant",
-      "text": "Correct. Unsupported items will appear in the receipt.",
-      "text_sha256": "d50eeab8e42dfa15cb1e4526058097b9a9cb7cf38d0bb74ea17435133900072b"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0045",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0045",
-      "ordinal": 45,
-      "role": "user",
-      "text": "What about duplicate notes?",
-      "text_sha256": "a93d9f1db6edf2befa5cf8e0d45b77105eafbb99fc70a6a90a047695ea39ca93"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0046",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0046",
-      "ordinal": 46,
-      "role": "assistant",
-      "text": "They should remain separate source records but be linked through duplicate evidence.",
-      "text_sha256": "a64f43ae4c068317035fba6572a81480c7282ad52f5ef741c1e53bc7dd683f8b"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0047",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0047",
-      "ordinal": 47,
-      "role": "user",
-      "text": "Good. Never merge files just because their contents match.",
-      "text_sha256": "c41598739c3dbcd463ec450a2e8504fb51f593ecbd7a855c25b43098bc6bee29"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0048",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0048",
-      "ordinal": 48,
-      "role": "assistant",
-      "text": "That preserves source identity.",
-      "text_sha256": "9da4fb20732fa9b9d5de0f2af7dae274539855c4dfe77e0812b0266c7272176c"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0049",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0049",
@@ -441,69 +73,6 @@
       "role": "user",
       "text": "Could we also export the project brief as a polished PDF?",
       "text_sha256": "64826af20bdbb0dc08274e3eec9438b101da6b016fd5012f65e7759968875914"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0050",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0050",
-      "ordinal": 50,
-      "role": "assistant",
-      "text": "Yes. A browser print layout could render the Markdown brief to PDF.",
-      "text_sha256": "7f878017919e59543ad61af18cfcafaf60e728e09e272d011deed564f9451c05"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0051",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0051",
-      "ordinal": 51,
-      "role": "user",
-      "text": "Would that take long?",
-      "text_sha256": "9f76db21df6efd51cfa8d204e07327f3f56fafac30d8c37bb222bafd5526824b"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0052",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0052",
-      "ordinal": 52,
-      "role": "assistant",
-      "text": "A basic renderer is manageable, but it introduces layout, fonts, pagination, and browser dependencies.",
-      "text_sha256": "967cde27d90b63d435c07a7cff211ee4cd8460f546dd4277d416faa61c0044aa"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0053",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0053",
-      "ordinal": 53,
-      "role": "user",
-      "text": "I like the idea of a title page and page numbers.",
-      "text_sha256": "802e4ea4907e140f2a88ed1cb0cf6d02a1bb4bba064a51572d27085655adaa3f"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0054",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0054",
-      "ordinal": 54,
-      "role": "assistant",
-      "text": "Those are reasonable publication features.",
-      "text_sha256": "10305ae04736d2a256f184b2c41eb3b8acc25d7b8300f198e77e4ca378f4d9e1"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0055",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0055",
-      "ordinal": 55,
-      "role": "user",
-      "text": "Could the PDF include the source appendix?",
-      "text_sha256": "cf33feb7e917b8303bc199a8f51226deff0d820099102ee177cf0e8ed9fb54ea"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0056",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0056",
-      "ordinal": 56,
-      "role": "assistant",
-      "text": "Yes, but that may make the demonstration longer and distract from the recovery workflow.",
-      "text_sha256": "db4deb6246d9798bed642930c6bcbec607416a09a3bdaa1d93ef9bb795035b0d"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0057",
@@ -515,42 +84,6 @@
       "text_sha256": "439494905172d705f52b120553e76839ebd0cba3f68bae6da9ca2cbecd4c0043"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0058",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0058",
-      "ordinal": 58,
-      "role": "assistant",
-      "text": "PDF export is deferred. The authoritative outputs remain Markdown and JSON.",
-      "text_sha256": "69cebcf55d2d82301119eb1639b0b1b8c2c1523b67a9aebbd6b80b799ea3485a"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0059",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0059",
-      "ordinal": 59,
-      "role": "user",
-      "text": "Make sure the backlog records it so we do not forget.",
-      "text_sha256": "dd8096dca4ed45182df1cb1c14ae72a5e8e7851aa313cced92429454f49d07f7"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0060",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0060",
-      "ordinal": 60,
-      "role": "assistant",
-      "text": "Recorded as a deferred enhancement.",
-      "text_sha256": "4066cc4c23f183fef01f38945cc7c09f172f832538b00376f8b5a12773a520dc"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0061",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0061",
-      "ordinal": 61,
-      "role": "assistant",
-      "text": "The first local test script is ready. It expects the fixture at C:\\Demo\\AtlasWorkshop\\fixture.",
-      "text_sha256": "8358306f9d8c6c2a972b0a9a758282cd5253096b1e08f8befe82b7a2c4f13cad"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0062",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0062",
@@ -558,33 +91,6 @@
       "role": "user",
       "text": "I ran it from D:\\Projects\\AtlasWorkshop and it failed because the path is hardcoded.",
       "text_sha256": "13138e76b24cdf509c063a1407f7c0f692410026c2db5e08ce33e21ff2550e30"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0063",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0063",
-      "ordinal": 63,
-      "role": "assistant",
-      "text": "That is a defect. The tool should accept an explicit input path and never assume a drive letter.",
-      "text_sha256": "0c59474182f080e3e37423f12156d5a8812459ce18d05b4fd9402b7ca5d2e9c8"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0064",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0064",
-      "ordinal": 64,
-      "role": "user",
-      "text": "It also created an empty output folder before validating the source path.",
-      "text_sha256": "ab9b87274ed963eacf7f9f0e506aa106acdc2ad679683bf5f50a00503304c766"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0065",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0065",
-      "ordinal": 65,
-      "role": "assistant",
-      "text": "That should fail closed before creating outputs.",
-      "text_sha256": "85793acd1f3588b580ed4c06d89a34cd722c84fd77081659754d38157f50c565"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0066",
@@ -596,33 +102,6 @@
       "text_sha256": "389359b8f0c3bd672974b5e4a0954b5b1c71054c5c8cc0d66212ecae87ce7f62"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0067",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0067",
-      "ordinal": 67,
-      "role": "assistant",
-      "text": "I will correct path handling, validate inputs first, and create the run folder only after preflight passes.",
-      "text_sha256": "126c5591637656146fba90c67a890d4a3f5131bbe7f347e56303363c24a758ea"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0068",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0068",
-      "ordinal": 68,
-      "role": "user",
-      "text": "Do not rewrite the source fixture while fixing it.",
-      "text_sha256": "168e9bb4b8b67541fa82a31d050399259083f1ef7443997856a4522b54d5aa9f"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0069",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0069",
-      "ordinal": 69,
-      "role": "assistant",
-      "text": "The repair will affect only the launcher and path resolution.",
-      "text_sha256": "937fd783e51af133ac0fbbc7f7ac6be0c7a8edd0c0ae9898ac49df9876742a85"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0070",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0070",
@@ -630,87 +109,6 @@
       "role": "user",
       "text": "AUTHORIZE_ATLAS_WORKSHOP_PATH_RESOLUTION_REPAIR_EXPLICIT_INPUT_ARGUMENT_PREFLIGHT_BEFORE_OUTPUT_CREATION_SOURCE_FIXTURE_READ_ONLY",
       "text_sha256": "d230e59e6849f7330c04af43a137ce55104a6f05e5ab17446a4c04804218e2d4"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0071",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0071",
-      "ordinal": 71,
-      "role": "assistant",
-      "text": "Repair authorization recorded.",
-      "text_sha256": "794f129b803ae0af1283a22095ff9d9ab354df65969fada8e54e2402ca8d590c"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0072",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0072",
-      "ordinal": 72,
-      "role": "assistant",
-      "text": "The revised launcher now accepts --input and --output arguments and resolves them to absolute paths.",
-      "text_sha256": "1e06beadad41583b1c24f41444d12c0fa51a3f5e4dbadffae79acfa61a9ff086"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0073",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0073",
-      "ordinal": 73,
-      "role": "user",
-      "text": "Does it handle spaces in folder names?",
-      "text_sha256": "251a653ad94df091f4ac0554eb23d3d392a50c514bfe5cd7c9c9a7b7da445ed0"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0074",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0074",
-      "ordinal": 74,
-      "role": "assistant",
-      "text": "Yes. Paths are passed as structured arguments and never concatenated into shell command strings.",
-      "text_sha256": "df40cec8de24d4fea20fc025a729fd6384816d8ef711741a51d59deef46bfd04"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0075",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0075",
-      "ordinal": 75,
-      "role": "user",
-      "text": "Good. That caused trouble in another project.",
-      "text_sha256": "e419876afbcf64950225010fc6b5e0cad0343c6c3ef7c3b0e946a96509ab9450"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0076",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0076",
-      "ordinal": 76,
-      "role": "assistant",
-      "text": "The preflight now checks existence, readability, supported source count, and output containment.",
-      "text_sha256": "21ee416a211d1f91fdbc6807d31d5a7d919c463302514714c42071ab332875ef"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0077",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0077",
-      "ordinal": 77,
-      "role": "user",
-      "text": "What happens if the output folder is inside the source folder?",
-      "text_sha256": "ce16ce350dd74dd218c9b50d26ed3780eeb7c4f103312d8046ed437c24e93fa9"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0078",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0078",
-      "ordinal": 78,
-      "role": "assistant",
-      "text": "Preflight rejects the run to prevent recursive ingestion.",
-      "text_sha256": "629d62d2946ad7fabbf1fd003ead261ae584c0426f2bd05d73b35490dcb47fc8"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0079",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0079",
-      "ordinal": 79,
-      "role": "user",
-      "text": "That is the correct behavior.",
-      "text_sha256": "a5fc711aa784e1c5eb9ecce5859a7523f0a63adc459480c45a53384624b29d18"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0080",
@@ -722,15 +120,6 @@
       "text_sha256": "a5235327fc454571b001359aefc063fd0bcb81b11c95791b0c1f7391c1f63519"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0081",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0081",
-      "ordinal": 81,
-      "role": "user",
-      "text": "What were the counts?",
-      "text_sha256": "184570bcf8abd9c5504667c9860140b68eb2aa62012413f3ae51c52debcfc25a"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0082",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0082",
@@ -738,69 +127,6 @@
       "role": "assistant",
       "text": "Six source records: four unique supported text sources, one exact duplicate, and one unsupported PNG. No source files changed.",
       "text_sha256": "de3b1eaf02c972f9f8588833f33b08fee138348aed829502c6dbde5c77f96f72"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0083",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0083",
-      "ordinal": 83,
-      "role": "user",
-      "text": "How many recovered claims?",
-      "text_sha256": "fd3a3ace5afe9adbe6346cdd64765df434b98a17731c76b0dfe2d472848e1114"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0084",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0084",
-      "ordinal": 84,
-      "role": "assistant",
-      "text": "Nine confirmed project facts, four operator decisions, and three unresolved items.",
-      "text_sha256": "43d2a04ebcb3b1fc4002b499609fa43e3eacb5db60f45c2ba4f29e9c57b55c6d"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0085",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0085",
-      "ordinal": 85,
-      "role": "user",
-      "text": "Did the duplicate stay independent?",
-      "text_sha256": "5dc92d0dfdb45e568a2ae9fdfdb05d698850c7d0be5e73d221e9a65adb939f7a"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0086",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0086",
-      "ordinal": 86,
-      "role": "assistant",
-      "text": "Yes. It has its own source ID and a duplicate-of evidence link.",
-      "text_sha256": "9526eb7e2dd0189963598987288b0095d07a000f07b8c8ba142e25eb9e7518f5"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0087",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0087",
-      "ordinal": 87,
-      "role": "user",
-      "text": "Did unsupported content appear in the receipt?",
-      "text_sha256": "0a3345cda704828294d16ba2fe988d87176b826b93b3cdef7db08e93b9feeb19"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0088",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0088",
-      "ordinal": 88,
-      "role": "assistant",
-      "text": "Yes. The PNG is listed with extraction_status UNSUPPORTED.",
-      "text_sha256": "a12015357d880030088cbc7354cf1e22ac1039607f1a1e152c9c01453d20d9ea"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0089",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0089",
-      "ordinal": 89,
-      "role": "user",
-      "text": "Can you run it again and compare hashes?",
-      "text_sha256": "cd598b11393e8243619a77eb1f5a0a4f244d782db53cfb68c15ac0822eb06fdd"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0090",
@@ -812,51 +138,6 @@
       "text_sha256": "51ad8b5573869c3608d094deb2a6745912e2ee4c77f04932f6219d18b4db1528"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0091",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0091",
-      "ordinal": 91,
-      "role": "user",
-      "text": "Show me the source trace for the claim that cloud sync is out of scope.",
-      "text_sha256": "c7241e094b3c16bbfec4df28a209140d1c1497e74ea65087d729d22da6f72328"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0092",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0092",
-      "ordinal": 92,
-      "role": "assistant",
-      "text": "That claim links to the user turn stating not to build cloud sync and to the structured authorization command.",
-      "text_sha256": "664e92b34daba9e509c99e642a9f157b69f76d7d4de5a15d5b75fd71b523ffc2"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0093",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0093",
-      "ordinal": 93,
-      "role": "user",
-      "text": "Good. Show the source trace for the PDF status.",
-      "text_sha256": "d4000e75bdd9d96a9ae66172a7c0baeac6b36d30648f63d0fef7eab199cc5e52"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0094",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0094",
-      "ordinal": 94,
-      "role": "assistant",
-      "text": "The PDF item is marked deferred and links to the turn that explicitly held it outside the acceptance gate.",
-      "text_sha256": "e451260a369d1993b7860f1bf9022b7d4a1ad002139df4cb70d430fecd0c40f9"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0095",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0095",
-      "ordinal": 95,
-      "role": "user",
-      "text": "That is exactly the distinction I wanted.",
-      "text_sha256": "fbfc363e409dbab735c9d5dae545995f75fb3e2f1015767d3912057da817359a"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0096",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0096",
@@ -866,15 +147,6 @@
       "text_sha256": "c8619d6c15433eeb06cea81e2ee0f32fa60093f7f19c298fda43bc0e9645c676"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0097",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0097",
-      "ordinal": 97,
-      "role": "assistant",
-      "text": "Acceptance recorded as a local fixture-tested baseline. This does not authorize production deployment.",
-      "text_sha256": "72c5ce793a9cb26820dc9b99a90f73212bec39e34428f279153ea7ae4798b6ef"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0098",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0098",
@@ -882,15 +154,6 @@
       "role": "user",
       "text": "Correct. Production deployment remains unauthorized until the operator interface and clean-checkout test are complete.",
       "text_sha256": "486cf2e718598d6e619e93b55210fe51c90f4873fcff35c12afec4212ddd906b"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0099",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0099",
-      "ordinal": 99,
-      "role": "assistant",
-      "text": "That boundary is recorded.",
-      "text_sha256": "41762dc594e14533df213167ed8ae6f4275164e94b510856c84c458cf575947e"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0100",
@@ -911,24 +174,6 @@
       "text_sha256": "17b176ddebbcb9f8bd9494ef7580510dd2009f105a70c99a7bff19c94acc7333"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0102",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0102",
-      "ordinal": 102,
-      "role": "user",
-      "text": "Which one should come next?",
-      "text_sha256": "c9281c8daf998bca60dfbc292c2fb38fe9bd25899d9f9847461413b3d84b9a14"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0103",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0103",
-      "ordinal": 103,
-      "role": "assistant",
-      "text": "Build the operator interface against the accepted fixture baseline, then test from a clean checkout.",
-      "text_sha256": "d334b7f718fd85c6d7e28e00ede109f02158f94008ff00c74501713739524f8c"
-    },
-    {
       "source_ref": "SRC-ATLAS-TURN-0104",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
       "turn_id": "ATLAS-TURN-0104",
@@ -936,15 +181,6 @@
       "role": "user",
       "text": "The interface should let me choose the fixture, run recovery, inspect claims, and open the exact source note.",
       "text_sha256": "46c9973c4cefad763f791ad72a5d9407d1e06195485b0c70598717b51e0284fe"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0105",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0105",
-      "ordinal": 105,
-      "role": "assistant",
-      "text": "That is enough for the next vertical slice.",
-      "text_sha256": "1a6d7c96d511fea56e6ce23c97e9ce6a1ff9cf3044093aef3050b70f20acb3f9"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0106",
@@ -956,31 +192,13 @@
       "text_sha256": "f0c30188d201f13e5141b8981de5a1814b0207406b32ff37c079d5853fae272b"
     },
     {
-      "source_ref": "SRC-ATLAS-TURN-0107",
+      "source_ref": "SRC-ATLAS-TURN-0103",
       "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0107",
-      "ordinal": 107,
+      "turn_id": "ATLAS-TURN-0103",
+      "ordinal": 103,
       "role": "assistant",
-      "text": "The interface remains read-only.",
-      "text_sha256": "91973319ce42b2c0a5458815ad0451fc39c5045f62ed67f7235e6f619680703a"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0108",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0108",
-      "ordinal": 108,
-      "role": "user",
-      "text": "What is the last trustworthy project state?",
-      "text_sha256": "e3232fde526bbd0991c813914cad11c76bd5df52e4d7ed32d0297ca474dfee04"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0109",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0109",
-      "ordinal": 109,
-      "role": "assistant",
-      "text": "The deterministic local pipeline baseline is accepted; production deployment is held; the operator interface is not yet built.",
-      "text_sha256": "e6a659cc71030cf390262f20f4a40d19f829ebfbb0de64599edf8923550b06dd"
+      "text": "Build the operator interface against the accepted fixture baseline, then test from a clean checkout.",
+      "text_sha256": "d334b7f718fd85c6d7e28e00ede109f02158f94008ff00c74501713739524f8c"
     },
     {
       "source_ref": "SRC-ATLAS-TURN-0110",
@@ -990,204 +208,6 @@
       "role": "user",
       "text": "Write that into the continuation brief.",
       "text_sha256": "46e56e44eaca955072450a9c1b29f3a201146e21ae7351fce41006f618dc9ce6"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0111",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0111",
-      "ordinal": 111,
-      "role": "assistant",
-      "text": "Done.",
-      "text_sha256": "ed251864987c367e9641fbdc89c1d83e9bf0fa2e3eecef8f301c79f619bfac81"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0112",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0112",
-      "ordinal": 112,
-      "role": "assistant",
-      "text": "Confirmed for review point 112: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "49dbc9b722786a5c520238fe4fbcd493385a0eb0e6d41eeca45a3d4ddbf4849e"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0113",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0113",
-      "ordinal": 113,
-      "role": "user",
-      "text": "Before we stop, confirm review point 113: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "0516073e823793434321264f7035d2bb5389ebc9af69c2210d4ab9cb155be648"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0114",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0114",
-      "ordinal": 114,
-      "role": "assistant",
-      "text": "Confirmed for review point 114: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "ff8517a772c4c4d663fdd3bcec1f6ec45270a4c5e9a131308bb5434db7c9117b"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0115",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0115",
-      "ordinal": 115,
-      "role": "user",
-      "text": "Before we stop, confirm review point 115: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "54db2ac07141c7932900bebfc5358c8147d90541acc2e649c06608c138e51206"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0116",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0116",
-      "ordinal": 116,
-      "role": "assistant",
-      "text": "Confirmed for review point 116: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "0194322c4cdcc2e4c0adb780d1e505da033cdc8e36a479a445efe70b76548d64"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0117",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0117",
-      "ordinal": 117,
-      "role": "user",
-      "text": "Before we stop, confirm review point 117: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "482e82eb4871ac354005f2f8ec3255daa4c84282a888d671e551cedc957f31fd"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0118",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0118",
-      "ordinal": 118,
-      "role": "assistant",
-      "text": "Confirmed for review point 118: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "67130a1d7333f66f8005b7f2d6d96fc96b6009bb52eb16b9eeb5e3301e9f975e"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0119",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0119",
-      "ordinal": 119,
-      "role": "user",
-      "text": "Before we stop, confirm review point 119: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "a0515b4d2fc7472e941b6b300593eda9d50db5c21ae57731173ec29a4607f0f4"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0120",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0120",
-      "ordinal": 120,
-      "role": "assistant",
-      "text": "Confirmed for review point 120: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "ff846a91189e4d22b76f19599281c860b3176873eb63f932b181e555bf2e35c7"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0121",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0121",
-      "ordinal": 121,
-      "role": "user",
-      "text": "Before we stop, confirm review point 121: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "93a7e962c366eb6d0079397c21b07f44a31eb412dfdbb1b6feb8505535d12989"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0122",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0122",
-      "ordinal": 122,
-      "role": "assistant",
-      "text": "Confirmed for review point 122: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "cc06f0c16173938ef86f5b8f82842fb9f829a13fb2bddafee74e46b249d36a89"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0123",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0123",
-      "ordinal": 123,
-      "role": "user",
-      "text": "Before we stop, confirm review point 123: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "069c5746469eb4876b2d202fe03d652c119597214879230544ea5856d80d197b"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0124",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0124",
-      "ordinal": 124,
-      "role": "assistant",
-      "text": "Confirmed for review point 124: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "9ca2682bf2727cb178f791cd7d33ce18d9e3d84d0b1edb7345def9af1ce6f8b7"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0125",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0125",
-      "ordinal": 125,
-      "role": "user",
-      "text": "Before we stop, confirm review point 125: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "2159dba35c8271ff9551d3cf3d72acff1edf35c79525c060060fc8caea8069c4"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0126",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0126",
-      "ordinal": 126,
-      "role": "assistant",
-      "text": "Confirmed for review point 126: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "0c5403b560229ddd3bbb4f5dc23f4d11e6c3ba751e783d81130c640f765a92f9"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0127",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0127",
-      "ordinal": 127,
-      "role": "user",
-      "text": "Before we stop, confirm review point 127: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "63cff922391ca01d0549b00a6b7ac95658a0d30a5cc4328e973b1eec025fcaa0"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0128",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0128",
-      "ordinal": 128,
-      "role": "assistant",
-      "text": "Confirmed for review point 128: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "34dd9ac0b54ea2ae9e592f4ea81a3f3b35e3c2b631dec20115e23f40fde063e0"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0129",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0129",
-      "ordinal": 129,
-      "role": "user",
-      "text": "Before we stop, confirm review point 129: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "aeb5e57f8d0733a3dd63fbca06cac9412ebc927e8ee3f7769191cf1ada693048"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0130",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0130",
-      "ordinal": 130,
-      "role": "assistant",
-      "text": "Confirmed for review point 130: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "59b85314db8db2cd09536dd8bdb977b7c32fbc8147667c960bf4498eafeee420"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0131",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0131",
-      "ordinal": 131,
-      "role": "user",
-      "text": "Before we stop, confirm review point 131: generated claims must remain traceable and the interface must stay read-only.",
-      "text_sha256": "571724f45c7d730fe132a71258c9e7f209defff2cfcc9e7a9f33c341b5874d38"
-    },
-    {
-      "source_ref": "SRC-ATLAS-TURN-0132",
-      "conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
-      "turn_id": "ATLAS-TURN-0132",
-      "ordinal": 132,
-      "role": "assistant",
-      "text": "Confirmed for review point 132: source traceability remains required, and no mutation controls are authorized.",
-      "text_sha256": "78eb95dba7ec94f908db8e223baaf1d96a4fa368e46b82f945ce41f5452d1b7c"
     }
   ],
   "claim_links": [
@@ -1217,7 +237,7 @@
       "claim_id": "SPINE-003",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0023"
+        "SRC-ATLAS-TURN-0024"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1226,8 +246,8 @@
       "claim_id": "SPINE-004",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0048",
-        "SRC-ATLAS-TURN-0056"
+        "SRC-ATLAS-TURN-0049",
+        "SRC-ATLAS-TURN-0057"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1236,8 +256,8 @@
       "claim_id": "SPINE-005",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0060",
-        "SRC-ATLAS-TURN-0062"
+        "SRC-ATLAS-TURN-0062",
+        "SRC-ATLAS-TURN-0066"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1246,7 +266,7 @@
       "claim_id": "SPINE-006",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0066"
+        "SRC-ATLAS-TURN-0070"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1255,8 +275,9 @@
       "claim_id": "SPINE-007",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0074",
-        "SRC-ATLAS-TURN-0082"
+        "SRC-ATLAS-TURN-0080",
+        "SRC-ATLAS-TURN-0082",
+        "SRC-ATLAS-TURN-0090"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1265,7 +286,7 @@
       "claim_id": "SPINE-008",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0090"
+        "SRC-ATLAS-TURN-0096"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1274,7 +295,7 @@
       "claim_id": "SPINE-009",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0092"
+        "SRC-ATLAS-TURN-0098"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1283,9 +304,10 @@
       "claim_id": "SPINE-010",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0094",
-        "SRC-ATLAS-TURN-0096",
-        "SRC-ATLAS-TURN-0102"
+        "SRC-ATLAS-TURN-0098",
+        "SRC-ATLAS-TURN-0100",
+        "SRC-ATLAS-TURN-0101",
+        "SRC-ATLAS-TURN-0104"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1294,7 +316,7 @@
       "claim_id": "AUTH-001",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0023"
+        "SRC-ATLAS-TURN-0024"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 1.0
@@ -1303,7 +325,7 @@
       "claim_id": "AUTH-002",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0056"
+        "SRC-ATLAS-TURN-0057"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 0.9
@@ -1312,7 +334,7 @@
       "claim_id": "AUTH-003",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0066"
+        "SRC-ATLAS-TURN-0070"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 1.0
@@ -1321,7 +343,7 @@
       "claim_id": "AUTH-004",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0090"
+        "SRC-ATLAS-TURN-0096"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 1.0
@@ -1330,7 +352,7 @@
       "claim_id": "AUTH-005",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0092"
+        "SRC-ATLAS-TURN-0098"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 0.9
@@ -1339,7 +361,7 @@
       "claim_id": "AUTH-006",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0100"
+        "SRC-ATLAS-TURN-0106"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 0.9
@@ -1348,12 +370,16 @@
       "claim_id": "CONT-001",
       "artifact_type": "CONTINUATION_BRIEF",
       "source_refs": [
-        "SRC-ATLAS-TURN-0090",
-        "SRC-ATLAS-TURN-0092",
-        "SRC-ATLAS-TURN-0094",
         "SRC-ATLAS-TURN-0096",
+        "SRC-ATLAS-TURN-0098",
+        "SRC-ATLAS-TURN-0005",
+        "SRC-ATLAS-TURN-0057",
         "SRC-ATLAS-TURN-0100",
-        "SRC-ATLAS-TURN-0102"
+        "SRC-ATLAS-TURN-0101",
+        "SRC-ATLAS-TURN-0103",
+        "SRC-ATLAS-TURN-0104",
+        "SRC-ATLAS-TURN-0106",
+        "SRC-ATLAS-TURN-0110"
       ],
       "rule_basis": "accepted_baseline_plus_explicit_hold_and_open_work",
       "confidence": 0.99
