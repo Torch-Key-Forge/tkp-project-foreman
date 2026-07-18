@@ -43,6 +43,8 @@ Project Foreman follows several strict boundaries:
 - issuing a command does not prove the work was completed;
 - natural-language authority candidates remain provisional until reviewed;
 - recovered claims retain exact source references;
+- authority references are regression-checked against direct operator turns;
+- artifact claim links are regression-checked against their golden outputs;
 - source content is read-only;
 - exported packages include manifests and SHA-256 checksums.
 
@@ -56,6 +58,8 @@ Requirements:
 - Windows 10 or later for the provided launchers;
 - no network connection after download;
 - no external Python packages.
+
+Current public release: **v0.1.3**, with semantic source-alignment repair and nine passing regression tests.
 
 ## Launch
 

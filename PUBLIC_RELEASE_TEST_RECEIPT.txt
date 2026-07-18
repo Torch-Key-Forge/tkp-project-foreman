@@ -1,9 +1,9 @@
 PROJECT_FOREMAN_PUBLIC_RELEASE_TEST_RECEIPT
-version=0.1.2
+version=0.1.3
 status=PASS
 test_command=python -m unittest discover -s tests
-tests_run=5
+tests_run=9
 failures=0
 errors=0
 result=OK
-validated_capabilities=fixture_load,recovery,source_trace,validated_zip_export,clean_checkout
+validated_capabilities=fixture_load,recovery,semantic_source_alignment,operator_role_alignment,claim_artifact_alignment,production_boundary_trace,validated_zip_export,clean_checkout

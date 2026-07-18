@@ -1217,7 +1217,7 @@
       "claim_id": "SPINE-003",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0023"
+        "SRC-ATLAS-TURN-0024"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1226,8 +1226,8 @@
       "claim_id": "SPINE-004",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0048",
-        "SRC-ATLAS-TURN-0056"
+        "SRC-ATLAS-TURN-0049",
+        "SRC-ATLAS-TURN-0057"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1236,8 +1236,8 @@
       "claim_id": "SPINE-005",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0060",
-        "SRC-ATLAS-TURN-0062"
+        "SRC-ATLAS-TURN-0062",
+        "SRC-ATLAS-TURN-0064"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1246,7 +1246,7 @@
       "claim_id": "SPINE-006",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0066"
+        "SRC-ATLAS-TURN-0070"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1255,8 +1255,9 @@
       "claim_id": "SPINE-007",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0074",
-        "SRC-ATLAS-TURN-0082"
+        "SRC-ATLAS-TURN-0080",
+        "SRC-ATLAS-TURN-0082",
+        "SRC-ATLAS-TURN-0090"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1265,7 +1266,7 @@
       "claim_id": "SPINE-008",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0090"
+        "SRC-ATLAS-TURN-0096"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1274,7 +1275,7 @@
       "claim_id": "SPINE-009",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0092"
+        "SRC-ATLAS-TURN-0098"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1283,9 +1284,9 @@
       "claim_id": "SPINE-010",
       "artifact_type": "PROJECT_SPINE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0094",
-        "SRC-ATLAS-TURN-0096",
-        "SRC-ATLAS-TURN-0102"
+        "SRC-ATLAS-TURN-0109",
+        "SRC-ATLAS-TURN-0110",
+        "SRC-ATLAS-TURN-0104"
       ],
       "rule_basis": "curated_fixture_golden_output",
       "confidence": 1.0
@@ -1294,7 +1295,7 @@
       "claim_id": "AUTH-001",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0023"
+        "SRC-ATLAS-TURN-0024"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 1.0
@@ -1303,7 +1304,7 @@
       "claim_id": "AUTH-002",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0056"
+        "SRC-ATLAS-TURN-0057"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 0.9
@@ -1312,7 +1313,7 @@
       "claim_id": "AUTH-003",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0066"
+        "SRC-ATLAS-TURN-0070"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 1.0
@@ -1321,7 +1322,7 @@
       "claim_id": "AUTH-004",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0090"
+        "SRC-ATLAS-TURN-0096"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 1.0
@@ -1330,7 +1331,7 @@
       "claim_id": "AUTH-005",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0092"
+        "SRC-ATLAS-TURN-0098"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 0.9
@@ -1339,7 +1340,7 @@
       "claim_id": "AUTH-006",
       "artifact_type": "AUTHORITY_LEDGER",
       "source_refs": [
-        "SRC-ATLAS-TURN-0100"
+        "SRC-ATLAS-TURN-0106"
       ],
       "rule_basis": "structured_or_reviewed_operator_statement",
       "confidence": 0.9
@@ -1348,12 +1349,12 @@
       "claim_id": "CONT-001",
       "artifact_type": "CONTINUATION_BRIEF",
       "source_refs": [
-        "SRC-ATLAS-TURN-0090",
-        "SRC-ATLAS-TURN-0092",
-        "SRC-ATLAS-TURN-0094",
         "SRC-ATLAS-TURN-0096",
+        "SRC-ATLAS-TURN-0098",
         "SRC-ATLAS-TURN-0100",
-        "SRC-ATLAS-TURN-0102"
+        "SRC-ATLAS-TURN-0103",
+        "SRC-ATLAS-TURN-0106",
+        "SRC-ATLAS-TURN-0110"
       ],
       "rule_basis": "accepted_baseline_plus_explicit_hold_and_open_work",
       "confidence": 0.99

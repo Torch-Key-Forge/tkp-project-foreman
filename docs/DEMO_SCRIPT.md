@@ -133,7 +133,7 @@ Stop.
 
 ## Recording Rules
 
-- Use the v0.1.2 TKP-branded validated-export build.
+- Use the v0.1.3 semantic-trace-repaired validated-export build.
 - Close unrelated browser tabs and notifications.
 - Use browser zoom between 90% and 100%.
 - Keep the mouse still during narration.

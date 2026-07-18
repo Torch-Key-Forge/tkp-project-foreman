@@ -23,11 +23,11 @@
   "recommended_next_action": "Build and test the read-only operator interface against the accepted Atlas Workshop fixture baseline.",
   "confidence": 0.99,
   "source_refs": [
-    "SRC-ATLAS-TURN-0090",
-    "SRC-ATLAS-TURN-0092",
-    "SRC-ATLAS-TURN-0094",
     "SRC-ATLAS-TURN-0096",
+    "SRC-ATLAS-TURN-0098",
     "SRC-ATLAS-TURN-0100",
-    "SRC-ATLAS-TURN-0102"
+    "SRC-ATLAS-TURN-0103",
+    "SRC-ATLAS-TURN-0106",
+    "SRC-ATLAS-TURN-0110"
   ]
 }

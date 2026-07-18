@@ -2,7 +2,7 @@
 
 ## Pre-Recording Setup
 
-- [ ] Launch from a clean extracted v0.1.2 folder.
+- [ ] Launch from a clean extracted v0.1.3 folder.
 - [ ] Confirm `http://127.0.0.1:8765` loads.
 - [ ] Clear prior exports from `Downloads\Project_Foreman_Exports`.
 - [ ] Disable desktop notifications.
