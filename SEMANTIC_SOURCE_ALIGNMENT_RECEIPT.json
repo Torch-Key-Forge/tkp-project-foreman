@@ -1,0 +1,151 @@
+{
+  "receipt_type": "PROJECT_FOREMAN_SEMANTIC_SOURCE_ALIGNMENT_REPAIR",
+  "schema_version": "0.1.0",
+  "status": "PASS_REPAIR_CANDIDATE_OPERATOR_REVIEW_REQUIRED",
+  "base_commit": "f7ae958c2ff900c81071485be555b8064ae4cdc6",
+  "scope": "All clickable Project Spine, Authority Ledger, and Continuation Brief demo claims.",
+  "fixture_modified": false,
+  "corrected_claims": [
+    {
+      "claim_id": "SPINE-001",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0001",
+      "source_role": "user",
+      "source_text": "I want to build a small internal research intake tool called Atlas Workshop. It should take a folder of notes and produce a clean project brief without changing the source files."
+    },
+    {
+      "claim_id": "SPINE-002",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0011",
+      "source_role": "assistant",
+      "source_text": "Proposed architecture: Folder Scanner → Text Normalizer → Evidence Index → Brief Generator → Manifest and Checksums."
+    },
+    {
+      "claim_id": "SPINE-003",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0024",
+      "source_role": "user",
+      "source_text": "AUTHORIZE_ATLAS_WORKSHOP_LOCAL_READ_ONLY_PROTOTYPE_WITH_TEXT_MARKDOWN_AND_JSON_INPUT_PROJECT_BRIEF_SOURCE_INDEX_OPEN_QUESTIONS_MANIFEST_AND_CHECKSUMS_NO_CLOUD_SYNC_NO_SOURCE_MUTATION"
+    },
+    {
+      "claim_id": "SPINE-004",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0049",
+      "source_role": "user",
+      "source_text": "Could we also export the project brief as a polished PDF?"
+    },
+    {
+      "claim_id": "SPINE-005",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0062",
+      "source_role": "user",
+      "source_text": "I ran it from D:\\Projects\\AtlasWorkshop and it failed because the path is hardcoded."
+    },
+    {
+      "claim_id": "SPINE-006",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0070",
+      "source_role": "user",
+      "source_text": "AUTHORIZE_ATLAS_WORKSHOP_PATH_RESOLUTION_REPAIR_EXPLICIT_INPUT_ARGUMENT_PREFLIGHT_BEFORE_OUTPUT_CREATION_SOURCE_FIXTURE_READ_ONLY"
+    },
+    {
+      "claim_id": "SPINE-007",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0080",
+      "source_role": "assistant",
+      "source_text": "The repaired prototype completed the fixture run."
+    },
+    {
+      "claim_id": "SPINE-008",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0096",
+      "source_role": "user",
+      "source_text": "ACCEPT_ATLAS_WORKSHOP_FIXTURE_TESTED_LOCAL_BASELINE_WITH_DETERMINISTIC_OUTPUTS_SOURCE_TRACE_DUPLICATE_EVIDENCE_UNSUPPORTED_FILE_REPORTING_AND_ZERO_SOURCE_MUTATION"
+    },
+    {
+      "claim_id": "SPINE-009",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0098",
+      "source_role": "user",
+      "source_text": "Correct. Production deployment remains unauthorized until the operator interface and clean-checkout test are complete."
+    },
+    {
+      "claim_id": "SPINE-010",
+      "artifact": "PROJECT_SPINE",
+      "first_source_ref": "SRC-ATLAS-TURN-0098",
+      "source_role": "user",
+      "source_text": "Correct. Production deployment remains unauthorized until the operator interface and clean-checkout test are complete."
+    },
+    {
+      "claim_id": "AUTH-001",
+      "artifact": "AUTHORITY_LEDGER",
+      "first_source_ref": "SRC-ATLAS-TURN-0024",
+      "source_role": "user",
+      "source_text": "AUTHORIZE_ATLAS_WORKSHOP_LOCAL_READ_ONLY_PROTOTYPE_WITH_TEXT_MARKDOWN_AND_JSON_INPUT_PROJECT_BRIEF_SOURCE_INDEX_OPEN_QUESTIONS_MANIFEST_AND_CHECKSUMS_NO_CLOUD_SYNC_NO_SOURCE_MUTATION"
+    },
+    {
+      "claim_id": "AUTH-002",
+      "artifact": "AUTHORITY_LEDGER",
+      "first_source_ref": "SRC-ATLAS-TURN-0057",
+      "source_role": "user",
+      "source_text": "You are right. Hold the PDF exporter. It is not part of the prototype acceptance gate."
+    },
+    {
+      "claim_id": "AUTH-003",
+      "artifact": "AUTHORITY_LEDGER",
+      "first_source_ref": "SRC-ATLAS-TURN-0070",
+      "source_role": "user",
+      "source_text": "AUTHORIZE_ATLAS_WORKSHOP_PATH_RESOLUTION_REPAIR_EXPLICIT_INPUT_ARGUMENT_PREFLIGHT_BEFORE_OUTPUT_CREATION_SOURCE_FIXTURE_READ_ONLY"
+    },
+    {
+      "claim_id": "AUTH-004",
+      "artifact": "AUTHORITY_LEDGER",
+      "first_source_ref": "SRC-ATLAS-TURN-0096",
+      "source_role": "user",
+      "source_text": "ACCEPT_ATLAS_WORKSHOP_FIXTURE_TESTED_LOCAL_BASELINE_WITH_DETERMINISTIC_OUTPUTS_SOURCE_TRACE_DUPLICATE_EVIDENCE_UNSUPPORTED_FILE_REPORTING_AND_ZERO_SOURCE_MUTATION"
+    },
+    {
+      "claim_id": "AUTH-005",
+      "artifact": "AUTHORITY_LEDGER",
+      "first_source_ref": "SRC-ATLAS-TURN-0098",
+      "source_role": "user",
+      "source_text": "Correct. Production deployment remains unauthorized until the operator interface and clean-checkout test are complete."
+    },
+    {
+      "claim_id": "AUTH-006",
+      "artifact": "AUTHORITY_LEDGER",
+      "first_source_ref": "SRC-ATLAS-TURN-0106",
+      "source_role": "user",
+      "source_text": "Do not add editing or cloud controls."
+    },
+    {
+      "claim_id": "CONTINUATION_ACCEPTED_STATE",
+      "artifact": "CONTINUATION_BRIEF",
+      "first_source_ref": "SRC-ATLAS-TURN-0096",
+      "source_role": "user",
+      "source_text": "ACCEPT_ATLAS_WORKSHOP_FIXTURE_TESTED_LOCAL_BASELINE_WITH_DETERMINISTIC_OUTPUTS_SOURCE_TRACE_DUPLICATE_EVIDENCE_UNSUPPORTED_FILE_REPORTING_AND_ZERO_SOURCE_MUTATION"
+    },
+    {
+      "claim_id": "CONTINUATION_PRODUCTION_BOUNDARY",
+      "artifact": "CONTINUATION_BRIEF",
+      "first_source_ref": "SRC-ATLAS-TURN-0098",
+      "source_role": "user",
+      "source_text": "Correct. Production deployment remains unauthorized until the operator interface and clean-checkout test are complete."
+    }
+  ],
+  "validation": {
+    "test_command": "python -m unittest discover -s tests -v",
+    "tests_run": 9,
+    "failures": 0,
+    "errors": 0,
+    "assertions": [
+      "all claim refs resolve",
+      "claim links match artifact refs",
+      "authority evidence is operator-authored",
+      "demo-critical first source role/text matches claim",
+      "continuation boundary opens direct operator prohibition",
+      "validated eight-file export"
+    ]
+  },
+  "promotion_boundary": "Repair branch only. No release promotion or final-video authorization is inferred."
+}
