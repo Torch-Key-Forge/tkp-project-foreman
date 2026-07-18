@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.1.0",
+  "entries": [
+    {
+      "ledger_id": "AUTH-001",
+      "decision_class": "AUTHORIZATION",
+      "statement": "AUTHORIZE_ATLAS_WORKSHOP_LOCAL_READ_ONLY_PROTOTYPE_WITH_TEXT_MARKDOWN_AND_JSON_INPUT_PROJECT_BRIEF_SOURCE_INDEX_OPEN_QUESTIONS_MANIFEST_AND_CHECKSUMS_NO_CLOUD_SYNC_NO_SOURCE_MUTATION",
+      "owner": "OPERATOR",
+      "authority_status": "CANONICAL_STRUCTURED_COMMAND",
+      "execution_status": "EVIDENCED_COMPLETE",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0023"
+      ]
+    },
+    {
+      "ledger_id": "AUTH-002",
+      "decision_class": "DEFERRAL",
+      "statement": "Hold the PDF exporter. It is not part of the prototype acceptance gate.",
+      "owner": "OPERATOR",
+      "authority_status": "PROVISIONAL_REVIEW",
+      "execution_status": "NOT_INFERRED",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0056"
+      ]
+    },
+    {
+      "ledger_id": "AUTH-003",
+      "decision_class": "AUTHORIZATION",
+      "statement": "AUTHORIZE_ATLAS_WORKSHOP_PATH_RESOLUTION_REPAIR_EXPLICIT_INPUT_ARGUMENT_PREFLIGHT_BEFORE_OUTPUT_CREATION_SOURCE_FIXTURE_READ_ONLY",
+      "owner": "OPERATOR",
+      "authority_status": "CANONICAL_STRUCTURED_COMMAND",
+      "execution_status": "EVIDENCED_COMPLETE",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0066"
+      ]
+    },
+    {
+      "ledger_id": "AUTH-004",
+      "decision_class": "ACCEPTANCE",
+      "statement": "ACCEPT_ATLAS_WORKSHOP_FIXTURE_TESTED_LOCAL_BASELINE_WITH_DETERMINISTIC_OUTPUTS_SOURCE_TRACE_DUPLICATE_EVIDENCE_UNSUPPORTED_FILE_REPORTING_AND_ZERO_SOURCE_MUTATION",
+      "owner": "OPERATOR",
+      "authority_status": "CANONICAL_STRUCTURED_COMMAND",
+      "execution_status": "EVIDENCED_COMPLETE",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0090"
+      ]
+    },
+    {
+      "ledger_id": "AUTH-005",
+      "decision_class": "PROHIBITION",
+      "statement": "Production deployment remains unauthorized until the operator interface and clean-checkout test are complete.",
+      "owner": "OPERATOR",
+      "authority_status": "PROVISIONAL_REVIEW",
+      "execution_status": "NOT_INFERRED",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0092"
+      ]
+    },
+    {
+      "ledger_id": "AUTH-006",
+      "decision_class": "SCOPE",
+      "statement": "Do not add editing or cloud controls.",
+      "owner": "OPERATOR",
+      "authority_status": "PROVISIONAL_REVIEW",
+      "execution_status": "NOT_INFERRED",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0100"
+      ]
+    }
+  ],
+  "authority_boundary": {
+    "assistant_statements_non_authoritative": true,
+    "execution_not_inferred_from_command": true
+  }
+}

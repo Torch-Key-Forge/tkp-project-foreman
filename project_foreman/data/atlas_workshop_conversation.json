@@ -1,0 +1,2052 @@
+{
+  "schema_version": "0.1.0",
+  "conversation_identity": {
+    "local_conversation_id": "PF-DEMO-ATLAS-WORKSHOP-001",
+    "platform_conversation_id": null,
+    "title": "Atlas Workshop \u2014 Local Research Intake Prototype",
+    "platform": "manual_import",
+    "canonical_url": null,
+    "project_id": "ATLAS-WORKSHOP",
+    "branch_scope": "linearized_unknown",
+    "identity_status": "stable"
+  },
+  "source_evidence": [
+    {
+      "source_id": "SRC-DEMO-CONVERSATION-001",
+      "source_type": "manual_import",
+      "source_locator": "fixtures/atlas_workshop_conversation.json",
+      "acquisition_method": "controlled_hybrid_synthetic_fixture",
+      "captured_at": "2026-07-17T21:48:24.127409+00:00",
+      "sha256": "65a7116c2458056b1033bada6999e8c45895aa63b7ed96e04d36210eee2e4151",
+      "completeness": "complete_claimed",
+      "confidence": 1.0,
+      "read_only": true
+    }
+  ],
+  "turns": [
+    {
+      "turn_id": "ATLAS-TURN-0001",
+      "ordinal": 1,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "I want to build a small internal research intake tool called Atlas Workshop. It should take a folder of notes and produce a clean project brief without changing the source files."
+        }
+      ],
+      "classifications": [
+        "spine"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0001"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0002",
+      "ordinal": 2,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "A safe first version can be local-only and read-only. The tool can inventory the folder, normalize supported text files, identify project themes, and produce a brief plus a source index."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0002"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0003",
+      "ordinal": 3,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The important part is that every claim in the brief must link back to the source note it came from."
+        }
+      ],
+      "classifications": [
+        "decision"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0003"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0004",
+      "ordinal": 4,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Then provenance should be part of the core data model rather than added later. Each claim should carry one or more source references."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0004"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0005",
+      "ordinal": 5,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Also, do not build cloud sync yet. I want the first version to run entirely on my computer."
+        }
+      ],
+      "classifications": [
+        "scope"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0005"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0006",
+      "ordinal": 6,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Understood. The initial boundary is local-only, read-only, and no cloud mutation."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0006"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0007",
+      "ordinal": 7,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Can you outline a good, better, best version?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0007"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0008",
+      "ordinal": 8,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Good: local folder intake, text normalization, project brief, source index. Better: duplicate detection, topic spine, decision extraction, and review queues. Best: multi-project orchestration, cloud custody, team workflows, and governed publishing."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0008"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0009",
+      "ordinal": 9,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Good is enough for the first build."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0009"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0010",
+      "ordinal": 10,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Then the first build should stay narrow and deterministic."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0010"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0011",
+      "ordinal": 11,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Proposed architecture: Folder Scanner \u2192 Text Normalizer \u2192 Evidence Index \u2192 Brief Generator \u2192 Manifest and Checksums."
+        }
+      ],
+      "classifications": [
+        "spine"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0011"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0012",
+      "ordinal": 12,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "What file types should it accept?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0012"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0013",
+      "ordinal": 13,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "For the prototype: UTF-8 text, Markdown, and JSON. PDF and office files should be deferred."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0013"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0014",
+      "ordinal": 14,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That is fine. I would rather have three formats work reliably than ten formats work badly."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0014"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0015",
+      "ordinal": 15,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Agreed. We can fail closed on unsupported files and report them without attempting conversion."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0015"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0016",
+      "ordinal": 16,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Should the output be one big report?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0016"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0017",
+      "ordinal": 17,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "A better demonstration would produce separate artifacts: Project Brief, Source Index, Open Questions, Manifest, and checksums."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0017"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0018",
+      "ordinal": 18,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Yes. Keep the source evidence separate from the readable brief."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0018"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0019",
+      "ordinal": 19,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That separation will also make later UI work easier."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0019"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0020",
+      "ordinal": 20,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "I want stable IDs for every source file and recovered claim."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0020"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0021",
+      "ordinal": 21,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "We can derive deterministic IDs from normalized relative paths and content hashes."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0021"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0022",
+      "ordinal": 22,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Do not use random UUIDs for the golden fixture."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0022"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0023",
+      "ordinal": 23,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Understood. The fixture build will use deterministic identifiers."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0023"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0024",
+      "ordinal": 24,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "AUTHORIZE_ATLAS_WORKSHOP_LOCAL_READ_ONLY_PROTOTYPE_WITH_TEXT_MARKDOWN_AND_JSON_INPUT_PROJECT_BRIEF_SOURCE_INDEX_OPEN_QUESTIONS_MANIFEST_AND_CHECKSUMS_NO_CLOUD_SYNC_NO_SOURCE_MUTATION"
+        }
+      ],
+      "classifications": [
+        "authorization",
+        "spine"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0024"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0025",
+      "ordinal": 25,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Authorization recorded. I will treat cloud sync, source mutation, and unsupported document conversion as out of scope."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0025"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0026",
+      "ordinal": 26,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The prototype can be implemented as a Python package with a small local web interface later."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0026"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0027",
+      "ordinal": 27,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Start with the pipeline first. The interface can wait until the outputs are trustworthy."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0027"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0028",
+      "ordinal": 28,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That is the right order."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0028"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0029",
+      "ordinal": 29,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "What should the acceptance test look like?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0029"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0030",
+      "ordinal": 30,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "A fixture folder with several notes, one duplicate, one unsupported file, and a few explicit decisions. The run should produce deterministic outputs and leave all source files unchanged."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0030"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0031",
+      "ordinal": 31,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Include a failed or ambiguous note too, so open questions are not invented as settled facts."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0031"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0032",
+      "ordinal": 32,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Good. The brief should distinguish confirmed facts, operator decisions, and unresolved items."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0032"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0033",
+      "ordinal": 33,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "I drafted the source record shape: source_id, relative_path, sha256, media_type, extraction_status, and warnings."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0033"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0034",
+      "ordinal": 34,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Add a read_only flag and original size."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0034"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0035",
+      "ordinal": 35,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Added. Claim records will include claim_id, text, claim_type, source_refs, and confidence."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0035"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0036",
+      "ordinal": 36,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Do not call something a decision unless the project owner actually decided it."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0036"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0037",
+      "ordinal": 37,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Then assistant proposals will remain proposals, never decisions."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0037"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0038",
+      "ordinal": 38,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Exactly."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0038"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0039",
+      "ordinal": 39,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "I also recommend storing a normalized excerpt for source trace display."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0039"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0040",
+      "ordinal": 40,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Yes, but keep the full original source file outside the generated package."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0040"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0041",
+      "ordinal": 41,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Understood."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0041"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0042",
+      "ordinal": 42,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The first fixture contains four Markdown notes, one JSON settings file, one duplicate note, and one PNG placeholder."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0042"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0043",
+      "ordinal": 43,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The PNG should be reported as unsupported, not ignored."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0043"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0044",
+      "ordinal": 44,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Correct. Unsupported items will appear in the receipt."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0044"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0045",
+      "ordinal": 45,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "What about duplicate notes?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0045"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0046",
+      "ordinal": 46,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "They should remain separate source records but be linked through duplicate evidence."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0046"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0047",
+      "ordinal": 47,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Good. Never merge files just because their contents match."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0047"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0048",
+      "ordinal": 48,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That preserves source identity."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0048"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0049",
+      "ordinal": 49,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Could we also export the project brief as a polished PDF?"
+        }
+      ],
+      "classifications": [
+        "branch"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0049"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0050",
+      "ordinal": 50,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Yes. A browser print layout could render the Markdown brief to PDF."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0050"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0051",
+      "ordinal": 51,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Would that take long?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0051"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0052",
+      "ordinal": 52,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "A basic renderer is manageable, but it introduces layout, fonts, pagination, and browser dependencies."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0052"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0053",
+      "ordinal": 53,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "I like the idea of a title page and page numbers."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0053"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0054",
+      "ordinal": 54,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Those are reasonable publication features."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0054"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0055",
+      "ordinal": 55,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Could the PDF include the source appendix?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0055"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0056",
+      "ordinal": 56,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Yes, but that may make the demonstration longer and distract from the recovery workflow."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0056"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0057",
+      "ordinal": 57,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "You are right. Hold the PDF exporter. It is not part of the prototype acceptance gate."
+        }
+      ],
+      "classifications": [
+        "deferral",
+        "spine"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0057"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0058",
+      "ordinal": 58,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "PDF export is deferred. The authoritative outputs remain Markdown and JSON."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0058"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0059",
+      "ordinal": 59,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Make sure the backlog records it so we do not forget."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0059"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0060",
+      "ordinal": 60,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Recorded as a deferred enhancement."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0060"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0061",
+      "ordinal": 61,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The first local test script is ready. It expects the fixture at C:\\Demo\\AtlasWorkshop\\fixture."
+        }
+      ],
+      "classifications": [
+        "artifact_reference"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0061"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0062",
+      "ordinal": 62,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "I ran it from D:\\Projects\\AtlasWorkshop and it failed because the path is hardcoded."
+        }
+      ],
+      "classifications": [
+        "failure",
+        "spine"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0062"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0063",
+      "ordinal": 63,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That is a defect. The tool should accept an explicit input path and never assume a drive letter."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0063"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0064",
+      "ordinal": 64,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "It also created an empty output folder before validating the source path."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0064"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0065",
+      "ordinal": 65,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That should fail closed before creating outputs."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0065"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0066",
+      "ordinal": 66,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The terminal error says FileNotFoundError for C:\\Demo\\AtlasWorkshop\\fixture."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0066"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0067",
+      "ordinal": 67,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "I will correct path handling, validate inputs first, and create the run folder only after preflight passes."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0067"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0068",
+      "ordinal": 68,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Do not rewrite the source fixture while fixing it."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0068"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0069",
+      "ordinal": 69,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The repair will affect only the launcher and path resolution."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0069"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0070",
+      "ordinal": 70,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "AUTHORIZE_ATLAS_WORKSHOP_PATH_RESOLUTION_REPAIR_EXPLICIT_INPUT_ARGUMENT_PREFLIGHT_BEFORE_OUTPUT_CREATION_SOURCE_FIXTURE_READ_ONLY"
+        }
+      ],
+      "classifications": [
+        "authorization",
+        "correction",
+        "spine"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0070"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0071",
+      "ordinal": 71,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Repair authorization recorded."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0071"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0072",
+      "ordinal": 72,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The revised launcher now accepts --input and --output arguments and resolves them to absolute paths."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0072"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0073",
+      "ordinal": 73,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Does it handle spaces in folder names?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0073"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0074",
+      "ordinal": 74,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Yes. Paths are passed as structured arguments and never concatenated into shell command strings."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0074"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0075",
+      "ordinal": 75,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Good. That caused trouble in another project."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0075"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0076",
+      "ordinal": 76,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The preflight now checks existence, readability, supported source count, and output containment."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0076"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0077",
+      "ordinal": 77,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "What happens if the output folder is inside the source folder?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0077"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0078",
+      "ordinal": 78,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Preflight rejects the run to prevent recursive ingestion."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0078"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0079",
+      "ordinal": 79,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That is the correct behavior."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0079"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0080",
+      "ordinal": 80,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The repaired prototype completed the fixture run."
+        }
+      ],
+      "classifications": [
+        "status"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0080"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0081",
+      "ordinal": 81,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "What were the counts?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0081"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0082",
+      "ordinal": 82,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Six source records: four unique supported text sources, one exact duplicate, and one unsupported PNG. No source files changed."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0082"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0083",
+      "ordinal": 83,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "How many recovered claims?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0083"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0084",
+      "ordinal": 84,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Nine confirmed project facts, four operator decisions, and three unresolved items."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0084"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0085",
+      "ordinal": 85,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Did the duplicate stay independent?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0085"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0086",
+      "ordinal": 86,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Yes. It has its own source ID and a duplicate-of evidence link."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0086"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0087",
+      "ordinal": 87,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Did unsupported content appear in the receipt?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0087"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0088",
+      "ordinal": 88,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Yes. The PNG is listed with extraction_status UNSUPPORTED."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0088"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0089",
+      "ordinal": 89,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Can you run it again and compare hashes?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0089"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0090",
+      "ordinal": 90,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The second run produced matching hashes for all golden outputs."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0090"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0091",
+      "ordinal": 91,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Show me the source trace for the claim that cloud sync is out of scope."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0091"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0092",
+      "ordinal": 92,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That claim links to the user turn stating not to build cloud sync and to the structured authorization command."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0092"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0093",
+      "ordinal": 93,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Good. Show the source trace for the PDF status."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0093"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0094",
+      "ordinal": 94,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The PDF item is marked deferred and links to the turn that explicitly held it outside the acceptance gate."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0094"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0095",
+      "ordinal": 95,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That is exactly the distinction I wanted."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0095"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0096",
+      "ordinal": 96,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "ACCEPT_ATLAS_WORKSHOP_FIXTURE_TESTED_LOCAL_BASELINE_WITH_DETERMINISTIC_OUTPUTS_SOURCE_TRACE_DUPLICATE_EVIDENCE_UNSUPPORTED_FILE_REPORTING_AND_ZERO_SOURCE_MUTATION"
+        }
+      ],
+      "classifications": [
+        "acceptance",
+        "spine"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0096"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0097",
+      "ordinal": 97,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Acceptance recorded as a local fixture-tested baseline. This does not authorize production deployment."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0097"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0098",
+      "ordinal": 98,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Correct. Production deployment remains unauthorized until the operator interface and clean-checkout test are complete."
+        }
+      ],
+      "classifications": [
+        "prohibition",
+        "spine"
+      ],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0098"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0099",
+      "ordinal": 99,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That boundary is recorded."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0099"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0100",
+      "ordinal": 100,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "What still needs to be built?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0100"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0101",
+      "ordinal": 101,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The operator interface, clean-checkout validation, and production deployment review."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0101"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0102",
+      "ordinal": 102,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Which one should come next?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0102"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0103",
+      "ordinal": 103,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Build the operator interface against the accepted fixture baseline, then test from a clean checkout."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0103"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0104",
+      "ordinal": 104,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The interface should let me choose the fixture, run recovery, inspect claims, and open the exact source note."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0104"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0105",
+      "ordinal": 105,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "That is enough for the next vertical slice."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0105"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0106",
+      "ordinal": 106,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Do not add editing or cloud controls."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0106"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0107",
+      "ordinal": 107,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The interface remains read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0107"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0108",
+      "ordinal": 108,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "What is the last trustworthy project state?"
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0108"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0109",
+      "ordinal": 109,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "The deterministic local pipeline baseline is accepted; production deployment is held; the operator interface is not yet built."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0109"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0110",
+      "ordinal": 110,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Write that into the continuation brief."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0110"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0111",
+      "ordinal": 111,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Done."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0111"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0112",
+      "ordinal": 112,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 112: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0112"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0113",
+      "ordinal": 113,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 113: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0113"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0114",
+      "ordinal": 114,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 114: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0114"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0115",
+      "ordinal": 115,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 115: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0115"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0116",
+      "ordinal": 116,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 116: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0116"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0117",
+      "ordinal": 117,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 117: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0117"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0118",
+      "ordinal": 118,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 118: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0118"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0119",
+      "ordinal": 119,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 119: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0119"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0120",
+      "ordinal": 120,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 120: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0120"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0121",
+      "ordinal": 121,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 121: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0121"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0122",
+      "ordinal": 122,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 122: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0122"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0123",
+      "ordinal": 123,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 123: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0123"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0124",
+      "ordinal": 124,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 124: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0124"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0125",
+      "ordinal": 125,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 125: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0125"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0126",
+      "ordinal": 126,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 126: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0126"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0127",
+      "ordinal": 127,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 127: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0127"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0128",
+      "ordinal": 128,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 128: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0128"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0129",
+      "ordinal": 129,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 129: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0129"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0130",
+      "ordinal": 130,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 130: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0130"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0131",
+      "ordinal": 131,
+      "role": "user",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Before we stop, confirm review point 131: generated claims must remain traceable and the interface must stay read-only."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0131"
+      ]
+    },
+    {
+      "turn_id": "ATLAS-TURN-0132",
+      "ordinal": 132,
+      "role": "assistant",
+      "content_blocks": [
+        {
+          "block_type": "markdown",
+          "text": "Confirmed for review point 132: source traceability remains required, and no mutation controls are authorized."
+        }
+      ],
+      "classifications": [],
+      "source_refs": [
+        "SRC-ATLAS-TURN-0132"
+      ]
+    }
+  ],
+  "normalization_receipt": {
+    "normalizer_version": "project_foreman_fixture_author_v0.1.0",
+    "generated_at": "2026-07-17T21:48:24.127409+00:00",
+    "turn_count": 132,
+    "sha256_algorithm": "SHA-256",
+    "warnings": [],
+    "duplicate_detection": {
+      "status": "not_applicable_to_single_fixture"
+    },
+    "validation_state": "schema_valid"
+  }
+}

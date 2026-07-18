@@ -1,0 +1,134 @@
+{
+  "schema_version": "0.1.0",
+  "project": {
+    "project_id": "ATLAS-WORKSHOP",
+    "title": "Atlas Workshop",
+    "summary": "A local, read-only research intake prototype with deterministic, source-traceable outputs."
+  },
+  "spine_events": [
+    {
+      "event_id": "SPINE-001",
+      "sequence": 1,
+      "title": "Project Intake",
+      "event_type": "intake",
+      "summary": "Project Intake",
+      "status": "completed",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0001",
+        "SRC-ATLAS-TURN-0003",
+        "SRC-ATLAS-TURN-0005"
+      ]
+    },
+    {
+      "event_id": "SPINE-002",
+      "sequence": 2,
+      "title": "Architecture Proposal",
+      "event_type": "proposal",
+      "summary": "Architecture Proposal",
+      "status": "completed",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0011",
+        "SRC-ATLAS-TURN-0017",
+        "SRC-ATLAS-TURN-0020"
+      ]
+    },
+    {
+      "event_id": "SPINE-003",
+      "sequence": 3,
+      "title": "Local Prototype Authorized",
+      "event_type": "authorization",
+      "summary": "Local Prototype Authorized",
+      "status": "accepted",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0023"
+      ]
+    },
+    {
+      "event_id": "SPINE-004",
+      "sequence": 4,
+      "title": "PDF Export Detour",
+      "event_type": "hold",
+      "summary": "PDF Export Detour",
+      "status": "held",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0048",
+        "SRC-ATLAS-TURN-0056"
+      ]
+    },
+    {
+      "event_id": "SPINE-005",
+      "sequence": 5,
+      "title": "Hardcoded Path Failure",
+      "event_type": "failure",
+      "summary": "Hardcoded Path Failure",
+      "status": "failed",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0060",
+        "SRC-ATLAS-TURN-0062"
+      ]
+    },
+    {
+      "event_id": "SPINE-006",
+      "sequence": 6,
+      "title": "Path Repair Authorized",
+      "event_type": "correction",
+      "summary": "Path Repair Authorized",
+      "status": "accepted",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0066"
+      ]
+    },
+    {
+      "event_id": "SPINE-007",
+      "sequence": 7,
+      "title": "Fixture Test Passed",
+      "event_type": "artifact",
+      "summary": "Fixture Test Passed",
+      "status": "completed",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0074",
+        "SRC-ATLAS-TURN-0082"
+      ]
+    },
+    {
+      "event_id": "SPINE-008",
+      "sequence": 8,
+      "title": "Local Baseline Accepted",
+      "event_type": "acceptance",
+      "summary": "Local Baseline Accepted",
+      "status": "accepted",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0090"
+      ]
+    },
+    {
+      "event_id": "SPINE-009",
+      "sequence": 9,
+      "title": "Production Deployment Held",
+      "event_type": "hold",
+      "summary": "Production Deployment Held",
+      "status": "held",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0092"
+      ]
+    },
+    {
+      "event_id": "SPINE-010",
+      "sequence": 10,
+      "title": "Operator Interface Incomplete",
+      "event_type": "continuation",
+      "summary": "Operator Interface Incomplete",
+      "status": "unresolved",
+      "source_refs": [
+        "SRC-ATLAS-TURN-0094",
+        "SRC-ATLAS-TURN-0096",
+        "SRC-ATLAS-TURN-0102"
+      ]
+    }
+  ],
+  "generation_receipt": {
+    "fixture_sha256": "7dc30d7beca0a8d5ad305d710f91ebcbf7427136296762c647f682e95ef3036c",
+    "generated_at": "2026-07-17T21:48:24.127409+00:00",
+    "deterministic": true
+  }
+}

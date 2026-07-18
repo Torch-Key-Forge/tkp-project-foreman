@@ -1,0 +1,8 @@
+[project]
+name = "project-foreman"
+version = "0.1.0"
+description = "Recover traceable project state from long AI conversations."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

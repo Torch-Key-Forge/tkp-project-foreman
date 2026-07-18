@@ -1,0 +1,19 @@
+{
+  "release_name": "TKP Project Foreman Build Week Demo",
+  "version": "0.1.2",
+  "generated_at": "2026-07-17T23:50:06.030767+00:00",
+  "build_status": "GATE_2_PASS",
+  "fixture": "PF-DEMO-ATLAS-WORKSHOP-001",
+  "private_corpus_included": false,
+  "third_party_python_dependencies": [],
+  "validated_capabilities": [
+    "clean checkout launch",
+    "fixture loading",
+    "deterministic recovery",
+    "project spine",
+    "authority ledger",
+    "continuation brief",
+    "source trace",
+    "validated eight-artifact ZIP export"
+  ]
+}
