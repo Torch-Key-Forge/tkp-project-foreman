@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Foreman</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">TKP · OpenAI Build Week Demo</div>
+      <div class="title-row">
+        <h1>TKP Project Foreman</h1>
+        <span class="trust-badge">Evidence-bound mode</span>
+      </div>
+      <p>Recover the valuable work trapped inside long AI conversations — without silently promoting inference into project truth.</p>
+    </div>
+    <div class="actions">
+      <button id="loadBtn" class="secondary">Load Fixture</button>
+      <button id="recoverBtn" class="primary">Recover Project</button>
+      <button id="exportBtn" class="secondary" disabled>Export Package</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="trust-strip">
+      <strong>No source, no claim.</strong>
+      <span>Canonical evidence is separated from provisional review, unresolved state, and unavailable sources.</span>
+    </section>
+
+    <section class="metrics" id="metrics">
+      <div class="metric"><span>Turns</span><strong>—</strong></div>
+      <div class="metric"><span>Spine events</span><strong>—</strong></div>
+      <div class="metric"><span>Authority entries</span><strong>—</strong></div>
+      <div class="metric"><span>Open items</span><strong>—</strong></div>
+      <div class="metric"><span>Traceable claims</span><strong>—</strong></div>
+    </section>
+
+    <section class="status" id="status">Load the fixture to begin.</section>
+
+    <section class="workspace">
+      <aside class="panel">
+        <div class="panel-heading">
+          <h2>Project Spine</h2>
+          <span id="spineCount">0</span>
+        </div>
+        <div id="spineList" class="list empty">No recovered spine yet.</div>
+      </aside>
+
+      <section class="panel">
+        <div class="tabs">
+          <button class="tab active" data-tab="authority">Authority</button>
+          <button class="tab" data-tab="continuation">Continuation</button>
+          <button class="tab" data-tab="evidence">Evidence Boundary</button>
+        </div>
+        <div id="authorityView" class="tab-view"></div>
+        <div id="continuationView" class="tab-view hidden"></div>
+        <div id="evidenceView" class="tab-view hidden"></div>
+      </section>
+
+      <aside class="panel source-panel">
+        <div class="panel-heading">
+          <h2>Source Evidence</h2>
+          <span id="sourceBadge">none</span>
+        </div>
+        <div id="sourceView" class="source empty">
+          Select a recovered item to inspect its exact source turn.
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <span>Private 29,345-turn corpus used only as scale validation evidence.</span>
+    <span id="exportStatus"></span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

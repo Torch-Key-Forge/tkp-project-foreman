@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "policy_id": "PF-EVIDENCE-BOUNDARY-001",
+  "mode": "EVIDENCE_BOUND",
+  "public_rule": "No source, no claim.",
+  "purpose": "Prevent an imported Project Foreman packet from silently manufacturing project history, decisions, authority, completion state, or external workspace content.",
+  "evidence_scope": {
+    "included_packet_evidence": "CANONICAL_PROJECT_EVIDENCE",
+    "external_workspace_access": "NOT_ASSUMED",
+    "source_content": "READ_ONLY"
+  },
+  "candidate_handling": {
+    "default_status": "PROVISIONAL_REVIEW",
+    "disposition": "HELD_FOR_REVIEW",
+    "promotion_rule": "OPERATOR_REVIEW_REQUIRED",
+    "assistant_authority_promotion": "NONE"
+  },
+  "execution_handling": {
+    "command_without_completion_evidence": "NOT_INFERRED",
+    "completion_without_evidence": "NOT_INFERRED"
+  },
+  "sifting_states": [
+    {
+      "state": "CANONICAL_PROJECT_EVIDENCE",
+      "meaning": "The claim is supported by evidence included in the packet and retains exact source references."
+    },
+    {
+      "state": "PROVISIONAL_REVIEW",
+      "meaning": "The item is a candidate interpretation and is held for operator review before any promotion."
+    },
+    {
+      "state": "UNRESOLVED",
+      "meaning": "The packet records the matter as open, conflicting, or not yet decided."
+    },
+    {
+      "state": "SOURCE_UNAVAILABLE",
+      "meaning": "Required evidence is absent from the imported packet and no external workspace access is assumed."
+    }
+  ],
+  "fail_closed_response": {
+    "status": "NOT_ESTABLISHED",
+    "message": "This claim is not established in the imported project evidence.",
+    "next_action": "Upload or connect the missing evidence, or request a clearly labeled provisional inference."
+  },
+  "provisional_inference": {
+    "label": "PROVISIONAL_INFERENCE",
+    "authority_status": "NON_AUTHORITATIVE",
+    "promotion_rule": "OPERATOR_REVIEW_REQUIRED"
+  },
+  "demo_case": {
+    "question": "Did the client approve production deployment?",
+    "result": "NOT_ESTABLISHED",
+    "explanation": "No supporting authority record or connected external source is available in the imported packet."
+  }
+}
