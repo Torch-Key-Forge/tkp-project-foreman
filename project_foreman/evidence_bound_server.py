@@ -76,6 +76,8 @@ def build_export_package() -> dict:
                 f"Evidence-bound ZIP validation expected 9 files but found {len(names)}."
             )
 
+        if final_zip.exists():
+            final_zip.unlink()
         shutil.move(str(temp_zip), str(final_zip))
 
     return {
