@@ -11,6 +11,9 @@
   --good: #9fd1a5;
   --warn: #e0b25c;
   --bad: #d89a8f;
+  --oxblood: #35181c;
+  --oxblood-deep: #241114;
+  --pewter: #938b82;
 }
 
 * { box-sizing: border-box; }
@@ -135,6 +138,7 @@ main {
 }
 
 .panel {
+  min-width: 0;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -200,6 +204,7 @@ main {
 }
 
 .tab-view {
+  min-width: 0;
   padding: 14px;
 }
 
@@ -207,20 +212,39 @@ main {
 
 .authority-card,
 .continuation-block {
-  border: 1px solid var(--border);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #6f6460;
   border-radius: 10px;
   padding: 12px;
   margin-bottom: 10px;
-  background: #141c25;
+  background: linear-gradient(145deg, var(--oxblood) 0%, var(--oxblood-deep) 100%);
 }
 
 .authority-card button {
+  min-width: 0;
   width: 100%;
   text-align: left;
   background: transparent;
   color: var(--text);
   border: 0;
   padding: 0;
+}
+
+.authority-statement,
+.authority-meta {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.authority-statement {
+  line-height: 1.45;
+}
+
+.authority-card button:focus-visible {
+  outline: 2px solid var(--pewter);
+  outline-offset: 4px;
 }
 
 .badge {
