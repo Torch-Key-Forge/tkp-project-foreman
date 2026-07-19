@@ -46,6 +46,26 @@ Project Foreman follows several strict boundaries:
 - source content is read-only;
 - exported packages include manifests and SHA-256 checksums.
 
+## Evidence Boundary
+
+Project Foreman packets operate in **evidence-bound mode**:
+
+- `CANONICAL_PROJECT_EVIDENCE` supports claims with included packet evidence and exact source references;
+- candidate interpretations remain `PROVISIONAL_REVIEW` and are `HELD_FOR_REVIEW`;
+- unresolved matters remain `UNRESOLVED`;
+- absent required evidence is marked `SOURCE_UNAVAILABLE`;
+- assistant authority promotion is `NONE`;
+- execution and completion without evidence remain `NOT_INFERRED`;
+- promotion requires `OPERATOR_REVIEW_REQUIRED`.
+
+The public rule is simple: **No source, no claim.**
+
+When a claim is unsupported, Project Foreman fails closed:
+
+> This claim is not established in the imported project evidence.
+
+An inference may be offered only when clearly labeled `PROVISIONAL_INFERENCE`. It remains non-authoritative until operator review.
+
 ## Included Build
 
 The competition build is a local, read-only Python application using only the Python standard library.
@@ -87,6 +107,7 @@ Load Fixture
 → Recover Project
 → inspect Project Spine
 → inspect Authority Ledger
+→ inspect Evidence Boundary
 → open Continuation Brief
 → verify exact Source Evidence
 → Export Package
@@ -105,6 +126,7 @@ This Build Week vertical slice supports:
 - structured operator commands;
 - reviewed continuation state;
 - exact source-turn inspection;
+- explicit evidence-bound packet policy;
 - validated package export.
 
 ## Repository Privacy
