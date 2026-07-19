@@ -83,8 +83,8 @@ function renderAuthority() {
     const button = document.createElement("button");
     button.innerHTML = `
       <div class="badge">${entry.decision_class}</div>
-      <div>${entry.statement}</div>
-      <div class="item-meta">
+      <div class="authority-statement">${entry.statement}</div>
+      <div class="item-meta authority-meta">
         ${entry.authority_status} · ${entry.execution_status}
       </div>
     `;
