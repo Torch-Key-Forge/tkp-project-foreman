@@ -9,7 +9,7 @@
       "authority_status": "CANONICAL_STRUCTURED_COMMAND",
       "execution_status": "EVIDENCED_COMPLETE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0023"
+        "SRC-ATLAS-TURN-0024"
       ]
     },
     {
@@ -20,7 +20,7 @@
       "authority_status": "PROVISIONAL_REVIEW",
       "execution_status": "NOT_INFERRED",
       "source_refs": [
-        "SRC-ATLAS-TURN-0056"
+        "SRC-ATLAS-TURN-0057"
       ]
     },
     {
@@ -31,7 +31,7 @@
       "authority_status": "CANONICAL_STRUCTURED_COMMAND",
       "execution_status": "EVIDENCED_COMPLETE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0066"
+        "SRC-ATLAS-TURN-0070"
       ]
     },
     {
@@ -42,7 +42,7 @@
       "authority_status": "CANONICAL_STRUCTURED_COMMAND",
       "execution_status": "EVIDENCED_COMPLETE",
       "source_refs": [
-        "SRC-ATLAS-TURN-0090"
+        "SRC-ATLAS-TURN-0096"
       ]
     },
     {
@@ -53,7 +53,7 @@
       "authority_status": "PROVISIONAL_REVIEW",
       "execution_status": "NOT_INFERRED",
       "source_refs": [
-        "SRC-ATLAS-TURN-0092"
+        "SRC-ATLAS-TURN-0098"
       ]
     },
     {
@@ -64,7 +64,7 @@
       "authority_status": "PROVISIONAL_REVIEW",
       "execution_status": "NOT_INFERRED",
       "source_refs": [
-        "SRC-ATLAS-TURN-0100"
+        "SRC-ATLAS-TURN-0106"
       ]
     }
   ],

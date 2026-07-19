@@ -40,7 +40,7 @@
       "summary": "Local Prototype Authorized",
       "status": "accepted",
       "source_refs": [
-        "SRC-ATLAS-TURN-0023"
+        "SRC-ATLAS-TURN-0024"
       ]
     },
     {
@@ -51,8 +51,8 @@
       "summary": "PDF Export Detour",
       "status": "held",
       "source_refs": [
-        "SRC-ATLAS-TURN-0048",
-        "SRC-ATLAS-TURN-0056"
+        "SRC-ATLAS-TURN-0049",
+        "SRC-ATLAS-TURN-0057"
       ]
     },
     {
@@ -63,8 +63,8 @@
       "summary": "Hardcoded Path Failure",
       "status": "failed",
       "source_refs": [
-        "SRC-ATLAS-TURN-0060",
-        "SRC-ATLAS-TURN-0062"
+        "SRC-ATLAS-TURN-0062",
+        "SRC-ATLAS-TURN-0066"
       ]
     },
     {
@@ -75,7 +75,7 @@
       "summary": "Path Repair Authorized",
       "status": "accepted",
       "source_refs": [
-        "SRC-ATLAS-TURN-0066"
+        "SRC-ATLAS-TURN-0070"
       ]
     },
     {
@@ -86,8 +86,9 @@
       "summary": "Fixture Test Passed",
       "status": "completed",
       "source_refs": [
-        "SRC-ATLAS-TURN-0074",
-        "SRC-ATLAS-TURN-0082"
+        "SRC-ATLAS-TURN-0080",
+        "SRC-ATLAS-TURN-0082",
+        "SRC-ATLAS-TURN-0090"
       ]
     },
     {
@@ -98,7 +99,7 @@
       "summary": "Local Baseline Accepted",
       "status": "accepted",
       "source_refs": [
-        "SRC-ATLAS-TURN-0090"
+        "SRC-ATLAS-TURN-0096"
       ]
     },
     {
@@ -109,7 +110,7 @@
       "summary": "Production Deployment Held",
       "status": "held",
       "source_refs": [
-        "SRC-ATLAS-TURN-0092"
+        "SRC-ATLAS-TURN-0098"
       ]
     },
     {
@@ -120,9 +121,10 @@
       "summary": "Operator Interface Incomplete",
       "status": "unresolved",
       "source_refs": [
-        "SRC-ATLAS-TURN-0094",
-        "SRC-ATLAS-TURN-0096",
-        "SRC-ATLAS-TURN-0102"
+        "SRC-ATLAS-TURN-0098",
+        "SRC-ATLAS-TURN-0100",
+        "SRC-ATLAS-TURN-0101",
+        "SRC-ATLAS-TURN-0104"
       ]
     }
   ],
