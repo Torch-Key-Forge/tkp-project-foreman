@@ -37,7 +37,15 @@
       <div class="metric"><span>Traceable claims</span><strong>—</strong></div>
     </section>
 
-    <section class="status" id="status">Load the fixture to begin.</section>
+    <section class="status status-idle" id="status" role="status" aria-live="polite" aria-atomic="true" aria-busy="false" data-state="IDLE">
+      <div class="status-topline">
+        <span class="status-state" id="statusState">IDLE</span>
+        <span class="status-operation" id="statusOperation">READY</span>
+        <span class="status-elapsed" id="statusElapsed">00:00</span>
+      </div>
+      <div class="activity-track" aria-hidden="true"><span class="activity-bar"></span></div>
+      <div class="status-message" id="statusMessage">Load the fixture or recover the project to begin.</div>
+    </section>
 
     <section class="workspace">
       <aside class="panel">

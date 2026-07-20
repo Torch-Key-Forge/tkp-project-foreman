@@ -1,15 +1,90 @@
 let fixture = null;
 let recovery = null;
+let activityStartedAt = null;
+let activityTimer = null;
+let activityRunning = false;
 
 const statusEl = document.getElementById("status");
+const statusState = document.getElementById("statusState");
+const statusOperation = document.getElementById("statusOperation");
+const statusElapsed = document.getElementById("statusElapsed");
+const statusMessage = document.getElementById("statusMessage");
+const loadBtn = document.getElementById("loadBtn");
+const recoverBtn = document.getElementById("recoverBtn");
 const exportBtn = document.getElementById("exportBtn");
 const sourceView = document.getElementById("sourceView");
 const sourceBadge = document.getElementById("sourceBadge");
+const exportStatus = document.getElementById("exportStatus");
 
 async function fetchJson(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Request failed: ${res.status}`);
   return res.json();
+}
+
+function formatElapsed(milliseconds) {
+  const totalSeconds = Math.max(0, Math.floor(milliseconds / 1000));
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  const clock = [minutes, seconds].map(value => String(value).padStart(2, "0")).join(":");
+  return hours > 0 ? `${String(hours).padStart(2, "0")}:${clock}` : clock;
+}
+
+function syncActionAvailability() {
+  loadBtn.disabled = activityRunning;
+  recoverBtn.disabled = activityRunning;
+  exportBtn.disabled = activityRunning || !recovery;
+}
+
+function setStatus(state, operation, message) {
+  statusEl.dataset.state = state;
+  statusEl.className = `status status-${state.toLowerCase()}`;
+  statusEl.setAttribute("aria-busy", state === "RUNNING" ? "true" : "false");
+  statusState.textContent = state;
+  statusOperation.textContent = operation;
+  statusMessage.textContent = message;
+}
+
+function updateElapsed() {
+  if (activityStartedAt === null) return;
+  statusElapsed.textContent = formatElapsed(performance.now() - activityStartedAt);
+}
+
+function beginActivity(operation, message) {
+  activityRunning = true;
+  activityStartedAt = performance.now();
+  statusElapsed.textContent = "00:00";
+  setStatus("RUNNING", operation, message);
+  syncActionAvailability();
+  window.clearInterval(activityTimer);
+  activityTimer = window.setInterval(updateElapsed, 250);
+}
+
+function finishActivity(state, operation, message) {
+  updateElapsed();
+  window.clearInterval(activityTimer);
+  activityTimer = null;
+  activityStartedAt = null;
+  activityRunning = false;
+  setStatus(state, operation, message);
+  syncActionAvailability();
+}
+
+function describeError(error) {
+  return error instanceof Error ? error.message : String(error);
+}
+
+async function runActivity({ operation, startMessage, task, successMessage }) {
+  beginActivity(operation, startMessage);
+  try {
+    const result = await task();
+    finishActivity("PASS", operation, successMessage(result));
+    return result;
+  } catch (error) {
+    finishActivity("FAIL", operation, `${operation} failed: ${describeError(error)}. Review the message and retry.`);
+    throw error;
+  }
 }
 
 function setMetrics(values) {
@@ -159,35 +234,57 @@ function renderEvidenceBoundary() {
   `;
 }
 
-document.getElementById("loadBtn").addEventListener("click", async () => {
-  statusEl.textContent = "Loading sanitized Atlas Workshop fixture…";
-  fixture = await fetchJson("/api/fixture");
-  statusEl.textContent = `Loaded ${fixture.conversation_identity.title} · ${fixture.turns.length} turns`;
-});
-
-document.getElementById("recoverBtn").addEventListener("click", async () => {
-  if (!fixture) {
-    fixture = await fetchJson("/api/fixture");
-  }
-  statusEl.textContent = "Recovering project spine, authority, continuation state, source traces, and evidence boundary…";
-  recovery = await fetchJson("/api/recover");
-  setMetrics(recovery.metrics);
-  renderSpine();
-  renderAuthority();
-  renderContinuation();
-  renderEvidenceBoundary();
-  exportBtn.disabled = false;
-  statusEl.textContent = "Recovery complete. Canonical evidence remains separate from provisional review and unavailable sources.";
-});
-
-document.getElementById("exportBtn").addEventListener("click", async () => {
-  const out = document.getElementById("exportStatus");
-  out.textContent = "Exporting and validating ZIP…";
+loadBtn.addEventListener("click", async () => {
   try {
-    const result = await fetchJson("/api/export");
-    out.textContent = `Validated export: ${result.filename} · ${result.file_count} files · Downloads\\Project_Foreman_Exports`;
+    await runActivity({
+      operation: "LOAD FIXTURE",
+      startMessage: "Loading the sanitized Atlas Workshop fixture…",
+      task: async () => {
+        fixture = await fetchJson("/api/fixture");
+        return fixture;
+      },
+      successMessage: loaded => `Loaded ${loaded.conversation_identity.title} · ${loaded.turns.length} turns.`,
+    });
   } catch (error) {
-    out.textContent = `EXPORT FAILED: ${error.message}`;
+    console.error(error);
+  }
+});
+
+recoverBtn.addEventListener("click", async () => {
+  try {
+    await runActivity({
+      operation: "RECOVER PROJECT",
+      startMessage: "Recovering project structure, authority, continuation state, source traces, and evidence boundary…",
+      task: async () => {
+        if (!fixture) fixture = await fetchJson("/api/fixture");
+        recovery = await fetchJson("/api/recover");
+        setMetrics(recovery.metrics);
+        renderSpine();
+        renderAuthority();
+        renderContinuation();
+        renderEvidenceBoundary();
+        return recovery;
+      },
+      successMessage: recovered => `Recovery complete · ${recovered.metrics.spine_events} spine events · ${recovered.metrics.authority_entries} authority entries · ${recovered.metrics.traceable_claims} traceable claims.`,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+exportBtn.addEventListener("click", async () => {
+  exportStatus.textContent = "";
+  try {
+    const result = await runActivity({
+      operation: "EXPORT PACKAGE",
+      startMessage: "Creating and validating the evidence-bound project package…",
+      task: () => fetchJson("/api/export"),
+      successMessage: exported => `Validated ${exported.filename} · ${exported.file_count} files · SHA-256 ${exported.sha256.slice(0, 12)}…`,
+    });
+    exportStatus.textContent = `Saved to Downloads\\Project_Foreman_Exports · ${result.file_count} files`;
+  } catch (error) {
+    exportStatus.textContent = `EXPORT FAILED: ${describeError(error)}`;
+    console.error(error);
   }
 });
 
@@ -201,3 +298,6 @@ document.querySelectorAll(".tab").forEach(btn => {
     document.getElementById("evidenceView").classList.toggle("hidden", tab !== "evidence");
   });
 });
+
+setStatus("IDLE", "READY", "Load the fixture or recover the project to begin.");
+syncActionAvailability();
