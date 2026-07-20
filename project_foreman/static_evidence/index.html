@@ -37,14 +37,29 @@
       <div class="metric"><span>Traceable claims</span><strong>—</strong></div>
     </section>
 
-    <section class="status status-idle" id="status" role="status" aria-live="polite" aria-atomic="true" aria-busy="false" data-state="IDLE">
+    <section class="status status-idle" id="status" role="status" aria-live="polite" aria-atomic="false" aria-busy="false" data-state="IDLE">
       <div class="status-topline">
         <span class="status-state" id="statusState">IDLE</span>
         <span class="status-operation" id="statusOperation">READY</span>
         <span class="status-elapsed" id="statusElapsed">00:00</span>
       </div>
-      <div class="activity-track" aria-hidden="true"><span class="activity-bar"></span></div>
+
+      <div class="activity-track" id="activityTrack" aria-hidden="true">
+        <span class="activity-bar"></span>
+      </div>
+
+      <div class="stage-progress hidden" id="stageProgress" role="progressbar" aria-label="Operation stage completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="No staged operation active">
+        <span class="stage-progress-fill" id="stageProgressFill"></span>
+        <span class="stage-percent" id="stagePercent">0%</span>
+      </div>
+
       <div class="status-message" id="statusMessage">Load the fixture or recover the project to begin.</div>
+      <ol class="status-stages hidden" id="statusStages"></ol>
+
+      <details class="status-log-panel">
+        <summary>Operator log</summary>
+        <pre id="statusLog">No staged operation has run yet.</pre>
+      </details>
     </section>
 
     <section class="workspace">
