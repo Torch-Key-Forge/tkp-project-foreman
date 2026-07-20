@@ -24,6 +24,8 @@ Project Foreman treats the conversation as a project record rather than a block 
 
 ## Demonstration
 
+**Public Build Week demonstration:** [Watch Project Foreman on YouTube](https://youtu.be/3KQ_LBIXUQc) — 2 minutes 57 seconds.
+
 The included Atlas Workshop fixture is a compact hybrid synthetic conversation modeled on real project behavior.
 
 The live demonstration shows:
