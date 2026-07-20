@@ -1,9 +1,19 @@
 PROJECT_FOREMAN_PUBLIC_RELEASE_TEST_RECEIPT
-version=0.1.2-semantic-alignment-repair-candidate
+version=0.2.0
 status=PASS
+release_state=OPERATOR_ACCEPTED_BETTER_STAGED_PROGRESS_BASELINE
+accepted_baseline_commit=70c2dd19dfb7382f6f0661a5f417355df4eb34b9
 test_command=python -m unittest discover -s tests -v
-tests_run=9
+tests_run=27
 failures=0
 errors=0
 result=OK
-validated_capabilities=fixture_load,recovery,source_trace,validated_zip_export,claim_link_consistency,operator_role_validation,demo_critical_text_alignment,continuation_boundary_alignment
+python_compile_check=PASS
+javascript_syntax_check=PASS
+recovery_stages=6_of_6_PASS
+export_stages=6_of_6_PASS
+evidence_bound_export_files=9
+zip_integrity=PASS
+checksum_manifest=PASS
+third_party_python_dependencies=0
+validated_capabilities=fixture_load,recovery,source_trace,evidence_boundary,claim_link_consistency,operator_role_validation,demo_critical_text_alignment,continuation_boundary_alignment,honest_activity_state,staged_recovery_progress,staged_export_progress,nine_file_validated_zip_export
