@@ -1,6 +1,6 @@
-# TKP Project Foreman
+# Project Foreman
 
-**Recover the valuable work trapped inside long AI conversations.**
+**Recover valuable work trapped inside long AI conversations.**
 
 Project Foreman converts a long, messy AI conversation into a traceable project workspace.
 
@@ -139,6 +139,39 @@ This Build Week vertical slice supports:
 - exact source-turn inspection;
 - explicit evidence-bound packet policy;
 - validated package export.
+
+## Build Week Development with Codex and GPT-5.6
+
+Project Foreman grew from earlier Torch & Key conversation-recovery research. During the Build Week submission period, that work was meaningfully extended into the public **v0.2.0** vertical slice in this repository:
+
+- a sanitized, deterministic Atlas Workshop fixture and judge-ready local application;
+- an explicit fail-closed Evidence Boundary;
+- truthful six-stage recovery and export progress;
+- a validated nine-file evidence-bound project packet;
+- a 27-test regression suite and reconciled release evidence;
+- public repository, website, demonstration, and submission materials.
+
+GPT-5.6 was used through Codex as a reasoning model in the submission-period build and reconciliation workflow. Codex helped:
+
+- audit the existing project and determine the strongest competition entry and positioning;
+- translate the accepted concept into requirements, action lists, Kanban plans, folder controls, and acceptance criteria;
+- implement and reconcile the Python application, interface, evidence rules, staged status mechanism, tests, manifests, checksums, and release metadata;
+- organize the supporting GitHub and public website surfaces;
+- support video planning and editing, submission continuity, deadline control, and final compliance audits.
+
+The operator retained authority over the product concept, track, scope, public claims, engineering boundaries, merges, publication, and final acceptance. Codex outputs remained proposals until reviewed or explicitly accepted.
+
+Project Foreman itself makes no external model or API calls at runtime. GPT-5.6 and Codex were development and reconciliation tools, not hidden runtime dependencies.
+
+## Verify the Release
+
+From the repository root, run:
+
+```powershell
+python -m unittest discover -s tests -v
+```
+
+The accepted v0.2.0 release result is **27 tests run, zero failures, zero errors**. The complete machine-readable evidence is preserved in [`PUBLIC_RELEASE_TEST_RECEIPT.txt`](PUBLIC_RELEASE_TEST_RECEIPT.txt), [`RELEASE.json`](RELEASE.json), and [`CHECKSUMS.sha256`](CHECKSUMS.sha256).
 
 ## Repository Privacy
 
