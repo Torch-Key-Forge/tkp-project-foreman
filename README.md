@@ -4,6 +4,8 @@
 
 Project Foreman converts a long, messy AI conversation into a traceable project workspace.
 
+Current accepted release: **v0.2.0 — Better Staged Progress**.
+
 It produces:
 
 - a navigable Project Spine;
@@ -70,6 +72,8 @@ An inference may be offered only when clearly labeled `PROVISIONAL_INFERENCE`. I
 
 The competition build is a local, read-only Python application using only the Python standard library.
 
+Recovery and export display truthful stage progress produced by the work itself. The interface reports six recovery stages and six export stages, marks only completed stages as complete, and does not invent an ETA or time-based percentage.
+
 Requirements:
 
 - Python 3.11 or later;
@@ -116,6 +120,13 @@ Load Fixture
 Validated exports are written to:
 
 `%USERPROFILE%\Downloads\Project_Foreman_Exports`
+
+Each evidence-bound export contains nine files:
+
+- five governed JSON artifacts: Project Spine, Authority Ledger, Continuation Brief, Source Trace Index, and Evidence Boundary;
+- two human-readable Markdown views: Project Spine and Continuation Brief;
+- `Manifest.json`;
+- `CHECKSUMS.sha256`.
 
 ## Current Scope
 
