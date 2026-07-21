@@ -1,6 +1,6 @@
 # PF-GTC Control State
 
-**Control version:** `1.2.0`  
+**Control version:** `1.2.1`  
 **State:** `GATE_4A_0_EXECUTED_BLOCKED_AT_OPERATOR_REVIEW_APPLICATION_HELD`  
 **Parent branch:** `main`  
 **Feature branch:** `feature/governed-token-continuity`
@@ -29,7 +29,9 @@ Completed build-control evidence:
 - `pyproject.toml` dependency and prohibition contract;
 - Contract Schema Pack v0.2.0;
 - strict Pydantic contract models;
-- five passing schema/contract tests;
+- exact P0/P1/P2/C1/R1/D1 treatment-matrix enforcement;
+- combined JSON Schema reference resolution;
+- 13 passing schema and contract tests;
 - plan-specific primary-reference addendum;
 - Gate 3 v1.0.1 non-destructive errata;
 - eight publisher-direct Linux wheels preserved in the canonical Drive archive;
@@ -48,7 +50,7 @@ G4A0-EX-003: OPERATOR_WORKSTATION_WSL2_PLATFORM_RECEIPT_REQUIRED
 ## Canonical closure custody
 
 - Drive archive: `1X-c0DT52dtp758Ne4slkb0r_fMW_dHK1`
-- Archive SHA-256: `92554efca83d29fdb951385c5e1721e2bb585d44dc048b4b39bd678eace3a35e`
+- Archive SHA-256: `307d785d57331090629a7860808ed6e6d0c3c80bb5398e7b289f6b7a50ef1da5`
 - Drive review document: `1usX8ZLh2PhqPRTe7ZUESUMSXCELBwB4vkPc5NzfAbwA`
 
 ## Active holds
@@ -77,8 +79,12 @@ Until separately authorized:
 - no secrets or provider configuration;
 - no private corpus or recovered private conversation material;
 - no live API calls;
-- no merge into `main`;
+- no Gate 4A-0 write or merge into `main`;
 - no release or deployment claim.
+
+## Repository note
+
+GitHub records merged pull request #11 on `main`, containing the earlier PF-GTC formation and automatic-status baseline. That merge was not performed by the Gate 4A-0 work. The current closure commits remain on `feature/governed-token-continuity`, and the feature branch is one merge commit behind `main` until a separately controlled synchronization.
 
 ## Current return point
 
