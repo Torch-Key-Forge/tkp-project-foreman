@@ -7,7 +7,7 @@
 ## Canonical custody
 
 - Closure archive: https://drive.google.com/file/d/1X-c0DT52dtp758Ne4slkb0r_fMW_dHK1/view
-- Archive SHA-256: `92554efca83d29fdb951385c5e1721e2bb585d44dc048b4b39bd678eace3a35e`
+- Archive SHA-256: `307d785d57331090629a7860808ed6e6d0c3c80bb5398e7b289f6b7a50ef1da5`
 - Review document: https://docs.google.com/document/d/1usX8ZLh2PhqPRTe7ZUESUMSXCELBwB4vkPc5NzfAbwA/edit
 
 ## Completed controls
@@ -15,7 +15,9 @@
 - bounded Gate 4A-0 authorization receipt;
 - Python 3.13.5 pin and project contract;
 - Contract Schema Pack v0.2.0 and strict Pydantic models;
-- five passing contract tests;
+- exact P0/P1/P2/C1/R1/D1 treatment-matrix enforcement;
+- combined JSON Schema reference resolution;
+- 13 passing contract tests;
 - primary-reference addendum;
 - Gate 3 non-destructive errata;
 - inventory of eight publisher-direct Linux wheels;
@@ -27,7 +29,7 @@
 2. Official `cl100k_base.tiktoken` asset, exact hash verification, and network-disabled tokenization proof.
 3. Operator-workstation WSL2 platform receipt.
 
-No placeholder lockfile or tokenizer asset was created. No PF-GTC application implementation, live API call, private corpus use, hosted CI run, `main` mutation, or production mutation occurred.
+No placeholder lockfile or tokenizer asset was created. No PF-GTC application implementation, live API call, private corpus use, hosted CI run, Gate 4A-0 write to `main`, or production mutation occurred.
 
 ## Return point
 
