@@ -3,8 +3,8 @@
 The strict Pydantic contract models are preserved in the canonical Gate 4A-0 closure archive:
 
 - Drive file ID: `1X-c0DT52dtp758Ne4slkb0r_fMW_dHK1`
-- Archive SHA-256: `92554efca83d29fdb951385c5e1721e2bb585d44dc048b4b39bd678eace3a35e`
+- Archive SHA-256: `307d785d57331090629a7860808ed6e6d0c3c80bb5398e7b289f6b7a50ef1da5`
 - Model path: `contracts/models.py`
-- Model SHA-256: `95e608076174c85540866814337e6251d6f355eb598446b303b0451d7eec4b16`
+- Model SHA-256: `7e2cda2866dc73a34f18d96f4e6e0e33762fb0be1c4de5534d206e184d03e27a`
 
-The models are strict data contracts only. They contain no context-routing, compression, MCP server, executor, provider, repository-write, or deployment logic. Local contract verification passed five tests.
+The models are strict data contracts only. They contain no context-routing, compression, MCP server, executor, provider, repository-write, or deployment logic. The exact treatment matrix is enforced fail-closed, and local contract verification passed 13 tests.
