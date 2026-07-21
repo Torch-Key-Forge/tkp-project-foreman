@@ -1,0 +1,26 @@
+{
+  "receipt_id": "PF-GTC-BUILD-STATUS-TEST-20260721-001",
+  "version": "1.0.0",
+  "status": "PASS",
+  "executed_at": "2026-07-21",
+  "execution_environment": "isolated local sandbox",
+  "python": "3.13",
+  "rich": "15.0.0",
+  "command": "python -m unittest discover -s tests -v",
+  "tests_run": 3,
+  "failures": 0,
+  "errors": 0,
+  "validated_behaviors": [
+    "evidence-driven Ready to Active to Review to Done lifecycle",
+    "dependency-derived card readiness",
+    "active hold produces Blocked state",
+    "machine-readable JSON snapshot serialization",
+    "unknown dependency fails configuration validation",
+    "Rich snapshot rendering",
+    "plain-text snapshot rendering"
+  ],
+  "live_api_execution": false,
+  "github_actions_execution": false,
+  "private_corpus_used": false,
+  "production_mutation": false
+}
