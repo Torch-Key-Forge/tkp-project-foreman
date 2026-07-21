@@ -2,8 +2,8 @@
 
 **Project ID:** `PF-GTC`  
 **Parent product:** Project Foreman  
-**Repository status:** Formation scaffold only  
-**Implementation status:** Not authorized
+**Repository status:** Formation scaffold plus authorized build-status utility  
+**Application implementation status:** Not authorized
 
 Governed Token Continuity is a Project Foreman capability for reducing continuation context while preserving controlling authority, exact execution anchors, provenance, and recoverability.
 
@@ -25,25 +25,40 @@ Project Foreman evidence and continuation state
 - Reference Dossier v1.0.0 is the accepted canonical Gate 3 DoD baseline.
 - Gate 4 Controlled Good Build Plan v0.1.1 is the controlling revised plan.
 - Gate 4A-0 has not been authorized.
-- No implementation work is authorized by this scaffold.
+- PF-GTC application implementation remains held.
+- A limited branch-only automatic build-status utility is authorized by `BUILD_STATUS_AUTHORITY.md`.
 - The live-model, jcode-runtime, GitHub Actions, private-corpus, and production/deployment holds remain active.
 
 See [`CONTROL_STATE.md`](CONTROL_STATE.md) for the precise return point and restrictions.
 
-## Planned lanes
+## Automatic build Kanban
 
-These paths describe the intended module shape. They are not implementation claims.
+The `build_status` package renders a live Rich terminal board and derives card state from project evidence rather than manual card movement.
+
+```powershell
+python -m pip install -r requirements-status.txt
+python -m build_status snapshot --root .
+python -m build_status watch --root .
+python -m build_status json --root . --output BUILD_STATUS_SNAPSHOT.json
+```
+
+The states are `Planned`, `Ready`, `Active`, `Review`, `Blocked`, and `Done`. A card reaches `Done` only when its configured acceptance receipt or authority evidence exists. The board is a reporter, not an approval authority.
+
+## Planned lanes
 
 ```text
 extensions/governed-token-continuity/
 ├── README.md
 ├── CONTROL_STATE.md
+├── BUILD_STATUS.json
+├── BUILD_STATUS_AUTHORITY.md
+├── build_status/    # authorized build-control utility
 ├── docs/
 │   └── REFERENCE_AND_AUTHORITY.md
-├── schemas/        # held until Gate 4A-0 authorization
-├── src/            # held until Gate 4 execution authorization
-├── tests/          # held until Gate 4 execution authorization
-└── fixtures/       # synthetic-only when authorized
+├── schemas/         # held until Gate 4A-0 authorization
+├── src/             # held until Gate 4 execution authorization
+├── tests/           # build-status tests only; application tests held
+└── fixtures/        # synthetic-only when authorized
 ```
 
 ## Evidence boundary
