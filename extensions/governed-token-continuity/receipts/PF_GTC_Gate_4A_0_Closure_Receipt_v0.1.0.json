@@ -1,6 +1,6 @@
 {
   "receipt_id": "PF-GTC-G4A0-CLOSURE-20260721-001",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "BLOCKED",
   "controlling_plan": "PF_GTC_Gate_4_Controlled_Good_Build_Plan_v0.1.1",
   "authorized_scope": "GATE_4A_0_REFERENCE_AND_BUILD_CONTROL_CLOSURE",
@@ -13,6 +13,14 @@
     "gate_3_non_destructive_errata": true,
     "publisher_direct_wheel_inventory": true,
     "exception_register": true
+  },
+  "contract_schema_pack": {
+    "status": "PASS",
+    "tests": "13 passed in 1.98s",
+    "schema_sha256": "0b9a72474b4c12996b156c4ba222f40215076325607e97223dd10aabcd88b626",
+    "models_sha256": "7e2cda2866dc73a34f18d96f4e6e0e33762fb0be1c4de5534d206e184d03e27a",
+    "exact_treatment_matrix_enforced": true,
+    "combined_schema_resource_refs_resolve": true
   },
   "not_complete": {
     "operator_wsl2_platform_proof": true,
@@ -31,11 +39,11 @@
   "live_api_execution": false,
   "private_corpus_items": 0,
   "github_actions_runs": 0,
-  "main_branch_mutations": 0,
+  "main_branch_mutations_by_gate_4a_0_work": 0,
   "production_mutations": 0,
   "canonical_archive": {
     "drive_file_id": "1X-c0DT52dtp758Ne4slkb0r_fMW_dHK1",
-    "sha256": "92554efca83d29fdb951385c5e1721e2bb585d44dc048b4b39bd678eace3a35e"
+    "sha256": "307d785d57331090629a7860808ed6e6d0c3c80bb5398e7b289f6b7a50ef1da5"
   },
   "return_point": "OPERATOR_REVIEW_OF_GATE_4A_0_BLOCKED_CLOSURE_CANDIDATE",
   "decision": "DO_NOT_ADVANCE_TO_GATE_4A"
