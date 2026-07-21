@@ -1,0 +1,42 @@
+{
+  "receipt_id": "PF-GTC-G4A0-CLOSURE-20260721-001",
+  "version": "0.1.0",
+  "status": "BLOCKED",
+  "controlling_plan": "PF_GTC_Gate_4_Controlled_Good_Build_Plan_v0.1.1",
+  "authorized_scope": "GATE_4A_0_REFERENCE_AND_BUILD_CONTROL_CLOSURE",
+  "completed": {
+    "bounded_authorization_receipt": true,
+    "python_version_pin": true,
+    "pyproject_contract": true,
+    "contract_schema_pack_v0_2_0": true,
+    "primary_reference_addendum": true,
+    "gate_3_non_destructive_errata": true,
+    "publisher_direct_wheel_inventory": true,
+    "exception_register": true
+  },
+  "not_complete": {
+    "operator_wsl2_platform_proof": true,
+    "complete_offline_wheelhouse": true,
+    "uv_lock": true,
+    "frozen_offline_uv_sync": true,
+    "official_cl100k_base_asset": true,
+    "network_disabled_tokenization_proof": true
+  },
+  "hard_blockers": [
+    "G4A0-EX-001",
+    "G4A0-EX-002",
+    "G4A0-EX-003"
+  ],
+  "gate_4a_authorized": false,
+  "live_api_execution": false,
+  "private_corpus_items": 0,
+  "github_actions_runs": 0,
+  "main_branch_mutations": 0,
+  "production_mutations": 0,
+  "canonical_archive": {
+    "drive_file_id": "1X-c0DT52dtp758Ne4slkb0r_fMW_dHK1",
+    "sha256": "92554efca83d29fdb951385c5e1721e2bb585d44dc048b4b39bd678eace3a35e"
+  },
+  "return_point": "OPERATOR_REVIEW_OF_GATE_4A_0_BLOCKED_CLOSURE_CANDIDATE",
+  "decision": "DO_NOT_ADVANCE_TO_GATE_4A"
+}
