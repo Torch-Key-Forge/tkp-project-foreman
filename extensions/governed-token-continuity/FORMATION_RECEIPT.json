@@ -1,0 +1,37 @@
+{
+  "receipt_id": "PF-GTC-GIT-FORMATION-20260721-001",
+  "version": "1.0.0",
+  "status": "FORMATION_SCAFFOLD_CREATED_IMPLEMENTATION_HELD",
+  "repository": "Torch-Key-Forge/tkp-project-foreman",
+  "base_branch": "main",
+  "feature_branch": "feature/governed-token-continuity",
+  "module_path": "extensions/governed-token-continuity",
+  "created_at": "2026-07-21",
+  "project_id": "PF-GTC",
+  "project_name": "Project Foreman — Governed Token Continuity",
+  "controlling_gate_4_plan": "PF_GTC_Gate_4_Controlled_Good_Build_Plan_v0.1.1",
+  "current_return_point": "OPERATOR_REVIEW_OF_PLAN_V0_1_1_AND_BOUNDED_GATE_4A_0_AUTHORIZATION",
+  "files_created": [
+    "extensions/governed-token-continuity/README.md",
+    "extensions/governed-token-continuity/CONTROL_STATE.md",
+    "extensions/governed-token-continuity/docs/REFERENCE_AND_AUTHORITY.md",
+    "extensions/governed-token-continuity/FORMATION_RECEIPT.json"
+  ],
+  "implementation_files_created": 0,
+  "dependency_files_modified": 0,
+  "workflow_files_modified": 0,
+  "default_branch_modified": false,
+  "pull_request_created": false,
+  "live_api_execution": false,
+  "private_corpus_included": false,
+  "production_mutation": false,
+  "holds_preserved": [
+    "LIVE_MODEL_PROVIDER",
+    "JCODE_RUNTIME",
+    "GITHUB_ACTIONS",
+    "PRIVATE_PROJECT_FOREMAN_CORPUS",
+    "HOSTED_PARITOK_SERVICE",
+    "EXTERNAL_TELEMETRY",
+    "PRODUCTION_AND_DEPLOYMENT"
+  ]
+}

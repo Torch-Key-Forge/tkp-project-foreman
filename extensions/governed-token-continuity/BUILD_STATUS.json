@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "project": {
+    "id": "PF-GTC",
+    "name": "Project Foreman — Governed Token Continuity",
+    "current_gate": "GATE_4A_0_REFERENCE_AND_BUILD_CONTROL_CLOSURE",
+    "return_point": "OPERATOR_REVIEW_OF_PLAN_V0_1_1_AND_GATE_4A_0_AUTHORIZATION",
+    "root_hint": "I:\\My Drive\\01_Forge\\Paritok_Hack_a_thon"
+  },
+  "holds": [
+    {"id": "live_model", "title": "Live model provider", "active": true, "detail": "No live API execution"},
+    {"id": "jcode_runtime", "title": "jcode runtime", "active": true, "detail": "Documentation complete; runtime not admitted"},
+    {"id": "github_actions", "title": "GitHub Actions", "active": true, "detail": "No hosted CI execution"},
+    {"id": "private_corpus", "title": "Private corpus", "active": true, "detail": "Synthetic fixtures only"},
+    {"id": "production", "title": "Production mutation and deployment", "active": true, "detail": "Feature branch only"},
+    {"id": "gate_4_execution", "title": "Gate 4 implementation", "active": true, "detail": "Held until Gate 4A-0 acceptance"}
+  ],
+  "cards": [
+    {
+      "id": "G4A0-01",
+      "title": "Accept project handoff and Git formation",
+      "gate": "4A-0",
+      "description": "Accept Conversation-to-Drive and branch formation records.",
+      "dependencies": [],
+      "active_when": {"any": [{"label": "acceptance draft exists", "path": "**/*Conversation_to_Drive*"}]},
+      "review_when": {"all": [{"label": "Git formation receipt", "path": "FORMATION_RECEIPT.json"}]},
+      "done_when": {"all": [{"label": "accepted control state", "path": "CONTROL_STATE.md", "contains": "GIT_FORMATION: ACCEPTED"}]}
+    },
+    {
+      "id": "G4A0-02",
+      "title": "Freeze execution platform",
+      "gate": "4A-0",
+      "dependencies": ["G4A0-01"],
+      "active_when": {"any": [{"label": "platform decision draft", "path": "controls/**/*platform*"}]},
+      "review_when": {"all": [{"label": "Python version file", "path": ".python-version"}, {"label": "platform receipt", "path": "receipts/**/*platform*"}]},
+      "done_when": {"all": [{"label": "accepted platform receipt", "path": "receipts/**/*platform*", "contains": "ACCEPTED"}]}
+    },
+    {
+      "id": "G4A0-03",
+      "title": "Freeze dependencies and offline wheelhouse",
+      "gate": "4A-0",
+      "dependencies": ["G4A0-02"],
+      "active_when": {"any": [{"label": "project metadata", "path": "pyproject.toml"}]},
+      "review_when": {"all": [{"label": "uv lock", "path": "uv.lock"}, {"label": "wheelhouse artifacts", "path": "wheelhouse/*", "min_matches": 1}]},
+      "done_when": {"all": [{"label": "wheelhouse receipt", "path": "receipts/**/*wheelhouse*", "contains": "PASS"}]}
+    },
+    {
+      "id": "G4A0-04",
+      "title": "Close schema, references, tokenizer, and errata",
+      "gate": "4A-0",
+      "dependencies": ["G4A0-03"],
+      "active_when": {"any": [{"label": "schema pack draft", "path": "schemas/**/*"}, {"label": "reference addendum", "path": "docs/**/*Reference*Addendum*"}]},
+      "review_when": {"all": [{"label": "Contract Schema Pack", "path": "schemas/**/*"}, {"label": "Tokenizer asset", "path": "assets/cl100k_base.tiktoken"}, {"label": "Gate 3 errata", "path": "controls/**/*errata*"}]},
+      "done_when": {"all": [{"label": "Gate 4A-0 closure receipt", "path": "receipts/**/*Gate_4A_0*", "contains": "PASS"}]},
+      "blocked_when": {"any": [{"label": "checksum mismatch", "path": "receipts/**/*", "contains": "HASH_MISMATCH"}]}
+    },
+    {
+      "id": "G4A-01",
+      "title": "Authority-Aware Context Governor",
+      "gate": "4A",
+      "dependencies": ["G4A0-04"],
+      "blocked_by_holds": ["gate_4_execution"],
+      "done_when": {"all": [{"label": "accepted governor receipt", "path": "receipts/**/*governor*", "contains": "ACCEPTED"}]}
+    },
+    {
+      "id": "G4B-01",
+      "title": "Paritok adapter and custom executor",
+      "gate": "4B",
+      "dependencies": ["G4A-01"],
+      "blocked_by_holds": ["gate_4_execution", "live_model"],
+      "done_when": {"all": [{"label": "accepted executor receipt", "path": "receipts/**/*executor*", "contains": "ACCEPTED"}]}
+    },
+    {
+      "id": "G4C-01",
+      "title": "Synthetic A/B/C benchmark and Gate 5 packet",
+      "gate": "4C",
+      "dependencies": ["G4B-01"],
+      "blocked_by_holds": ["gate_4_execution"],
+      "done_when": {"all": [{"label": "Gate 5 candidate receipt", "path": "receipts/**/*Gate_5*", "contains": "PASS"}]}
+    }
+  ]
+}
