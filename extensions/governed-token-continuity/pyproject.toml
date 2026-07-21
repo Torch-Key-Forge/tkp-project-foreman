@@ -1,0 +1,39 @@
+[project]
+name = "pf-gtc-governed-token-continuity"
+version = "0.1.0"
+description = "Build-control contracts for the Project Foreman Governed Token Continuity extension."
+requires-python = "==3.13.5"
+dependencies = [
+  "mcp==1.28.1",
+  "opentelemetry-sdk==1.44.0",
+  "paritok==1.2.3",
+  "pydantic==2.13.4",
+  "jsonschema==4.26.0",
+  "tiktoken==0.13.0",
+]
+
+[dependency-groups]
+test = [
+  "hypothesis==6.157.1",
+  "pytest==9.1.1",
+]
+status = [
+  "rich==15.0.0",
+]
+
+[tool.uv]
+package = false
+python-downloads = "never"
+no-index = true
+find-links = ["wheelhouse"]
+
+[tool.pf_gtc]
+controlling-plan = "PF_GTC_Gate_4_Controlled_Good_Build_Plan_v0.1.1"
+execution-platform = "WSL2/Linux x86_64"
+python-version = "3.13.5"
+uv-version = "0.11.29"
+paritok-mode = "PARITOK_COMPONENT_CONTRACT_MODE_WITH_DETERMINISTIC_IN_PROCESS_COMPRESSOR"
+application-implementation-authorized = false
+live-api-authorized = false
+private-corpus-authorized = false
+hosted-ci-authorized = false
