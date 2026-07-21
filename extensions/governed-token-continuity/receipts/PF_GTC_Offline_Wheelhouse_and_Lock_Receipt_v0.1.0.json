@@ -1,0 +1,20 @@
+{
+  "receipt_id": "PF-GTC-G4A0-WHEELHOUSE-20260721-001",
+  "version": "0.1.0",
+  "status": "BLOCKED",
+  "publisher_direct_wheels_held": 8,
+  "complete_transitive_wheelhouse": false,
+  "uv_lock_created": false,
+  "offline_sync_proven": false,
+  "required_command": "uv sync --frozen --offline --no-python-downloads",
+  "blockers": [
+    "The complete direct and transitive Linux x86_64 / CPython 3.13 publisher artifact set is not held in the active environment.",
+    "Publisher artifacts cannot be substituted with locally reconstructed wheels without explicit exception approval.",
+    "A uv.lock must not be fabricated without a reproducible resolution and successful offline sync."
+  ],
+  "release_requirement": "Acquire every pinned direct and transitive publisher artifact, generate uv.lock with uv 0.11.29, and pass the required frozen offline sync.",
+  "canonical_archive": {
+    "drive_file_id": "1X-c0DT52dtp758Ne4slkb0r_fMW_dHK1",
+    "sha256": "92554efca83d29fdb951385c5e1721e2bb585d44dc048b4b39bd678eace3a35e"
+  }
+}
