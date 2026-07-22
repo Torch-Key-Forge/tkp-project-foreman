@@ -1,0 +1,28 @@
+{
+  "register_id": "PF-GTC-G4A0-EXCEPTIONS-20260721-001",
+  "version": "0.1.0",
+  "status": "OPEN_BLOCKERS_RECORDED",
+  "exceptions": [
+    {
+      "exception_id": "G4A0-EX-001",
+      "severity": "CRITICAL",
+      "state": "OPEN",
+      "description": "The complete publisher-origin direct and transitive Linux x86_64 / CPython 3.13 wheelhouse is not held.",
+      "release_requirement": "Acquire and verify every required artifact, create a truthful uv.lock with uv 0.11.29, and pass uv sync --frozen --offline --no-python-downloads."
+    },
+    {
+      "exception_id": "G4A0-EX-002",
+      "severity": "CRITICAL",
+      "state": "OPEN",
+      "description": "The official cl100k_base.tiktoken asset is not held.",
+      "release_requirement": "Acquire the official asset, match SHA-256 223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7, and prove network-disabled tokenization."
+    },
+    {
+      "exception_id": "G4A0-EX-003",
+      "severity": "HIGH",
+      "state": "OPEN",
+      "description": "The operator-workstation WSL2 host platform receipt has not been executed.",
+      "release_requirement": "Run the platform preflight in WSL2 and record kernel, architecture, Python 3.13.5, uv 0.11.29, and no-download controls."
+    }
+  ]
+}

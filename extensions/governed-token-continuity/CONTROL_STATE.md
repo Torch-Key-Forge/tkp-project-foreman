@@ -1,49 +1,63 @@
 # PF-GTC Control State
 
-**Control version:** `1.1.0`  
-**State:** `FORMATION_SCAFFOLD_ACTIVE_BUILD_STATUS_UTILITY_AUTHORIZED_APPLICATION_HELD`  
+**Control version:** `1.2.1`  
+**State:** `GATE_4A_0_EXECUTED_BLOCKED_AT_OPERATOR_REVIEW_APPLICATION_HELD`  
 **Parent branch:** `main`  
 **Feature branch:** `feature/governed-token-continuity`
 
-## Accepted authority
+## Accepted and active authority
 
 ```text
 REFERENCE_DOSSIER_V1_0_0: ACCEPTED_CANONICAL_GATE_3_DOD_BASELINE
 GATE_3: CLOSED_ACCEPTED
 CONTROLLING_GATE_4_PLAN: PF_GTC_Gate_4_Controlled_Good_Build_Plan_v0.1.1
-GATE_4_PLAN_STATE: REVISED_PLAN_ONLY
-GATE_4A_0: NOT_AUTHORIZED
-GATE_4_EXECUTION: NOT_AUTHORIZED
-BUILD_STATUS_UTILITY: LIMITED_IMPLEMENTATION_AUTHORIZED
+AUTOMATIC_RICH_BUILD_STATUS_UTILITY_V1_0_0: ACCEPTED_LIMITED_BUILD_CONTROL_BASELINE
+GATE_4A_0: AUTHORIZED_AND_EXECUTED_TO_BLOCKED_REVIEW_CANDIDATE
+GATE_4A: NOT_AUTHORIZED
+GATE_4B: NOT_AUTHORIZED
+GATE_4C: NOT_AUTHORIZED
+PF_GTC_APPLICATION_IMPLEMENTATION: NOT_AUTHORIZED
 ```
 
-## Limited build-status authorization
+## Gate 4A-0 outcome
 
-The operator explicitly authorized an automatic Rich/Python Kanban mechanism for the build project. This permits only:
+Completed build-control evidence:
 
-- `build_status/` evidence-evaluation and rendering code;
-- `BUILD_STATUS.json` board configuration;
-- local Rich terminal display;
-- plain-text and JSON snapshots;
-- launchers, tests, documentation, and receipts for that utility.
+- exact bounded authorization receipt;
+- Python `3.13.5` pin;
+- WSL2/Linux x86_64 project target and platform-review receipt;
+- `pyproject.toml` dependency and prohibition contract;
+- Contract Schema Pack v0.2.0;
+- strict Pydantic contract models;
+- exact P0/P1/P2/C1/R1/D1 treatment-matrix enforcement;
+- combined JSON Schema reference resolution;
+- 13 passing schema and contract tests;
+- plan-specific primary-reference addendum;
+- Gate 3 v1.0.1 non-destructive errata;
+- eight publisher-direct Linux wheels preserved in the canonical Drive archive;
+- exception register, checksum manifest, and blocked closure receipt.
 
-The utility is non-authoritative. It reports configured evidence and never grants acceptance.
+Gate 4A-0 did not pass. No placeholder `uv.lock` or tokenizer asset was created.
 
-## Good baseline
+## Open hard blockers
 
-- custom Python executor;
-- local stdio MCP Context Gateway;
-- P0-D1 authority-aware context policy;
-- Paritok 1.2.3 component-contract adapter;
-- deterministic in-process compression fixture for contract testing;
-- raw fallback and exact-anchor protection;
-- local-only observability;
-- synthetic fixtures only.
+```text
+G4A0-EX-001: COMPLETE_PUBLISHER_WHEELHOUSE_UV_LOCK_AND_FROZEN_OFFLINE_SYNC_REQUIRED
+G4A0-EX-002: OFFICIAL_CL100K_BASE_ASSET_HASH_AND_OFFLINE_TOKENIZATION_REQUIRED
+G4A0-EX-003: OPERATOR_WORKSTATION_WSL2_PLATFORM_RECEIPT_REQUIRED
+```
+
+## Canonical closure custody
+
+- Drive archive: `1X-c0DT52dtp758Ne4slkb0r_fMW_dHK1`
+- Archive SHA-256: `307d785d57331090629a7860808ed6e6d0c3c80bb5398e7b289f6b7a50ef1da5`
+- Drive review document: `1usX8ZLh2PhqPRTe7ZUESUMSXCELBwB4vkPc5NzfAbwA`
 
 ## Active holds
 
 ```text
 LIVE_MODEL_PROVIDER: HOLD
+REAL_PARITOK_MODEL_OR_BACKEND: HOLD
 JCODE_RUNTIME: HOLD
 GITHUB_ACTIONS: HOLD
 PRIVATE_PROJECT_FOREMAN_CORPUS: HOLD
@@ -51,29 +65,35 @@ HOSTED_PARITOK_SERVICE: HOLD
 EXTERNAL_TELEMETRY: HOLD
 PRODUCTION_MUTATION_AND_DEPLOYMENT: HOLD
 PF_GTC_APPLICATION_IMPLEMENTATION: HOLD
+GATE_4A_ADVANCE: HOLD
 ```
 
 ## Prohibited repository actions
 
 Until separately authorized:
 
-- no PF-GTC application runtime source files beyond the build-status utility;
-- no root package or lockfile changes;
-- no workflow files;
+- no PF-GTC application runtime source files beyond the accepted status utility;
+- no fabricated or incomplete `uv.lock` represented as accepted;
+- no placeholder tokenizer asset;
+- no workflow files or hosted CI runs;
 - no secrets or provider configuration;
 - no private corpus or recovered private conversation material;
 - no live API calls;
-- no merge into `main`;
+- no Gate 4A-0 write or merge into `main`;
 - no release or deployment claim.
+
+## Repository note
+
+GitHub records merged pull request #11 on `main`, containing the earlier PF-GTC formation and automatic-status baseline. That merge was not performed by the Gate 4A-0 work. The current closure commits remain on `feature/governed-token-continuity`, and the feature branch is one merge commit behind `main` until a separately controlled synchronization.
 
 ## Current return point
 
 ```text
-OPERATOR_REVIEW_OF_GATE_4_CONTROLLED_GOOD_BUILD_PLAN_V0_1_1
-AND_BOUNDED_GATE_4A_0_AUTHORIZATION
+OPERATOR_REVIEW_OF_GATE_4A_0_BLOCKED_CLOSURE_CANDIDATE
+DO_NOT_ADVANCE_TO_GATE_4A
 ```
 
-Gate 4A-0 must close the execution-platform decision, Python and dependency lock, offline wheelhouse, Contract Schema Pack v0.2.0, plan-specific reference addendum, tokenizer asset custody, Gate 3 errata, and its closure receipt. The build must then stop again for review.
+The next bounded work is blocker closure only: execute the WSL2 platform preflight, acquire and verify the complete publisher wheelhouse, create and prove the truthful frozen offline lock environment, and acquire and prove the official tokenizer asset offline.
 
 ## Supersession note
 
@@ -81,4 +101,4 @@ The later-created `PF_GTC_Gate_4_Implementation_and_Compatibility_Plan_v0.1.0` d
 
 ## Merge rule
 
-This branch may be merged only after a future operator acceptance explicitly authorizes the relevant repository state. The automatic status utility and its passing tests do not constitute acceptance of the PF-GTC application build.
+This branch may be merged only after a future operator acceptance explicitly authorizes the relevant repository state. The status utility, contract tests, and Gate 4A-0 candidate receipts do not constitute acceptance of the PF-GTC application build.

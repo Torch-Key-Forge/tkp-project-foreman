@@ -3,63 +3,65 @@
   "project": {
     "id": "PF-GTC",
     "name": "Project Foreman — Governed Token Continuity",
-    "current_gate": "GATE_4A_0_REFERENCE_AND_BUILD_CONTROL_CLOSURE",
-    "return_point": "OPERATOR_REVIEW_OF_PLAN_V0_1_1_AND_GATE_4A_0_AUTHORIZATION",
+    "current_gate": "GATE_4A_0_BLOCKED_OPERATOR_REVIEW",
+    "return_point": "OPERATOR_REVIEW_OF_GATE_4A_0_BLOCKED_CLOSURE_CANDIDATE",
     "root_hint": "I:\\My Drive\\01_Forge\\Paritok_Hack_a_thon"
   },
   "holds": [
+    {"id": "gate_4a0_blockers", "title": "Gate 4A-0 closure blockers", "active": true, "detail": "Wheelhouse, tokenizer asset, and WSL2 host proof remain open"},
     {"id": "live_model", "title": "Live model provider", "active": true, "detail": "No live API execution"},
     {"id": "jcode_runtime", "title": "jcode runtime", "active": true, "detail": "Documentation complete; runtime not admitted"},
     {"id": "github_actions", "title": "GitHub Actions", "active": true, "detail": "No hosted CI execution"},
     {"id": "private_corpus", "title": "Private corpus", "active": true, "detail": "Synthetic fixtures only"},
     {"id": "production", "title": "Production mutation and deployment", "active": true, "detail": "Feature branch only"},
-    {"id": "gate_4_execution", "title": "Gate 4 implementation", "active": true, "detail": "Held until Gate 4A-0 acceptance"}
+    {"id": "gate_4_execution", "title": "Gate 4 application implementation", "active": true, "detail": "Held until Gate 4A-0 passes and is accepted"}
   ],
   "cards": [
     {
       "id": "G4A0-01",
-      "title": "Accept project handoff and Git formation",
+      "title": "Establish bounded Gate 4A-0 authority",
       "gate": "4A-0",
-      "description": "Accept Conversation-to-Drive and branch formation records.",
+      "description": "Record the accepted status utility and exact bounded Gate 4A-0 authorization.",
       "dependencies": [],
-      "active_when": {"any": [{"label": "acceptance draft exists", "path": "**/*Conversation_to_Drive*"}]},
-      "review_when": {"all": [{"label": "Git formation receipt", "path": "FORMATION_RECEIPT.json"}]},
-      "done_when": {"all": [{"label": "accepted control state", "path": "CONTROL_STATE.md", "contains": "GIT_FORMATION: ACCEPTED"}]}
+      "active_when": {"any": [{"label": "Git formation receipt", "path": "FORMATION_RECEIPT.json"}]},
+      "review_when": {"all": [{"label": "Gate 4A-0 authorization receipt", "path": "controls/PF_GTC_Gate_4A_0_Authorization_Receipt_v1.0.0.md"}]},
+      "done_when": {"all": [{"label": "active bounded authorization", "path": "controls/PF_GTC_Gate_4A_0_Authorization_Receipt_v1.0.0.md", "contains": "ACTIVE_BOUNDED_AUTHORIZATION"}]}
     },
     {
       "id": "G4A0-02",
       "title": "Freeze execution platform",
       "gate": "4A-0",
       "dependencies": ["G4A0-01"],
-      "active_when": {"any": [{"label": "platform decision draft", "path": "controls/**/*platform*"}]},
-      "review_when": {"all": [{"label": "Python version file", "path": ".python-version"}, {"label": "platform receipt", "path": "receipts/**/*platform*"}]},
-      "done_when": {"all": [{"label": "accepted platform receipt", "path": "receipts/**/*platform*", "contains": "ACCEPTED"}]}
+      "active_when": {"any": [{"label": "Python version file", "path": ".python-version"}]},
+      "review_when": {"all": [{"label": "Python version file", "path": ".python-version"}, {"label": "platform receipt", "path": "receipts/PF_GTC_Execution_Platform_Receipt_v0.1.0.json"}]},
+      "done_when": {"all": [{"label": "accepted platform receipt", "path": "receipts/PF_GTC_Execution_Platform_Receipt_v0.1.0.json", "contains": "\"status\": \"PASS\""}]}
     },
     {
       "id": "G4A0-03",
       "title": "Freeze dependencies and offline wheelhouse",
       "gate": "4A-0",
-      "dependencies": ["G4A0-02"],
+      "dependencies": ["G4A0-01"],
       "active_when": {"any": [{"label": "project metadata", "path": "pyproject.toml"}]},
-      "review_when": {"all": [{"label": "uv lock", "path": "uv.lock"}, {"label": "wheelhouse artifacts", "path": "wheelhouse/*", "min_matches": 1}]},
-      "done_when": {"all": [{"label": "wheelhouse receipt", "path": "receipts/**/*wheelhouse*", "contains": "PASS"}]}
+      "review_when": {"all": [{"label": "uv lock", "path": "uv.lock"}, {"label": "wheelhouse artifacts", "path": "wheelhouse/*.whl", "min_matches": 1}]},
+      "done_when": {"all": [{"label": "wheelhouse receipt", "path": "receipts/PF_GTC_Offline_Wheelhouse_and_Lock_Receipt_v0.1.0.json", "contains": "\"status\": \"PASS\""}]},
+      "blocked_when": {"any": [{"label": "wheelhouse blocker receipt", "path": "receipts/PF_GTC_Offline_Wheelhouse_and_Lock_Receipt_v0.1.0.json", "contains": "\"status\": \"BLOCKED\""}]}
     },
     {
       "id": "G4A0-04",
-      "title": "Close schema, references, tokenizer, and errata",
+      "title": "Close schemas, references, tokenizer, and errata",
       "gate": "4A-0",
-      "dependencies": ["G4A0-03"],
-      "active_when": {"any": [{"label": "schema pack draft", "path": "schemas/**/*"}, {"label": "reference addendum", "path": "docs/**/*Reference*Addendum*"}]},
-      "review_when": {"all": [{"label": "Contract Schema Pack", "path": "schemas/**/*"}, {"label": "Tokenizer asset", "path": "assets/cl100k_base.tiktoken"}, {"label": "Gate 3 errata", "path": "controls/**/*errata*"}]},
-      "done_when": {"all": [{"label": "Gate 4A-0 closure receipt", "path": "receipts/**/*Gate_4A_0*", "contains": "PASS"}]},
-      "blocked_when": {"any": [{"label": "checksum mismatch", "path": "receipts/**/*", "contains": "HASH_MISMATCH"}]}
+      "dependencies": ["G4A0-01"],
+      "active_when": {"any": [{"label": "schema pack custody", "path": "schemas/README.md"}, {"label": "reference addendum", "path": "docs/PF_GTC_Gate_4A_0_Primary_Reference_Addendum_v0.1.0.md"}]},
+      "review_when": {"all": [{"label": "schema receipt", "path": "receipts/PF_GTC_Contract_Schema_Pack_Receipt_v0.2.0.json", "contains": "\"status\": \"PASS\""}, {"label": "reference addendum", "path": "docs/PF_GTC_Gate_4A_0_Primary_Reference_Addendum_v0.1.0.md"}, {"label": "Gate 3 errata", "path": "controls/PF_GTC_Gate_3_Non_Destructive_Errata_v1.0.1.md"}]},
+      "done_when": {"all": [{"label": "Gate 4A-0 closure receipt", "path": "receipts/PF_GTC_Gate_4A_0_Closure_Receipt_v0.1.0.json", "contains": "\"status\": \"PASS\""}]},
+      "blocked_when": {"any": [{"label": "tokenizer blocker receipt", "path": "receipts/PF_GTC_Tokenizer_Asset_Receipt_v0.1.0.json", "contains": "\"status\": \"BLOCKED\""}, {"label": "Gate 4A-0 blocked closure", "path": "receipts/PF_GTC_Gate_4A_0_Closure_Receipt_v0.1.0.json", "contains": "\"status\": \"BLOCKED\""}]}
     },
     {
       "id": "G4A-01",
       "title": "Authority-Aware Context Governor",
       "gate": "4A",
-      "dependencies": ["G4A0-04"],
-      "blocked_by_holds": ["gate_4_execution"],
+      "dependencies": ["G4A0-02", "G4A0-03", "G4A0-04"],
+      "blocked_by_holds": ["gate_4_execution", "gate_4a0_blockers"],
       "done_when": {"all": [{"label": "accepted governor receipt", "path": "receipts/**/*governor*", "contains": "ACCEPTED"}]}
     },
     {

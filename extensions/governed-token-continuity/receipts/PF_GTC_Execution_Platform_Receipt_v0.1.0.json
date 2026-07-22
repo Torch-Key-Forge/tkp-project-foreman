@@ -1,0 +1,24 @@
+{
+  "receipt_id": "PF-GTC-G4A0-PLATFORM-20260721-001",
+  "version": "0.1.0",
+  "status": "REVIEW",
+  "target": {
+    "environment": "WSL2/Linux",
+    "architecture": "x86_64",
+    "python": "3.13.5",
+    "uv": "0.11.29"
+  },
+  "reference_execution_observed": {
+    "kernel_family": "Linux",
+    "architecture": "x86_64",
+    "python": "3.13.5"
+  },
+  "operator_host_wsl2_receipt": "PENDING",
+  "native_windows_parity": "HELD",
+  "decision": "TARGET_FROZEN_FOR_REVIEW_NOT_YET_GATE_ACCEPTED",
+  "prohibitions": [
+    "NO_AUTOMATIC_PYTHON_DOWNLOADS",
+    "NO_NATIVE_WINDOWS_PARITY_CLAIM",
+    "NO_APPLICATION_EXECUTION"
+  ]
+}
